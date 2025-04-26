@@ -1,3 +1,3 @@
 export default function Brands() {
-  return <div>Brands</div>;
+  return <section>Brands</section>;
 }
