@@ -11,7 +11,7 @@ const features = [
 
 export default function Banner() {
   return (
-    <div className="-mt-[88px] h-[80svh] bg-[url(/banner.jpg)]">
+    <div className="-mt-[88px] h-[80svh] bg-[url(/images/banner.jpg)]">
       <div className="container flex flex-col justify-center h-full">
         <h1 className="font-outfit font-semibold text-6xl leading-[72px] tracking-[0%] text-white max-w-[776px] mb-[28px]">
           Continuing education on AI, supervision, and burnout
