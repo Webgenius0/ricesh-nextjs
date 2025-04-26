@@ -17,7 +17,7 @@ export default function Components() {
               <div className="h-10 bg-secondary"></div>
             </div>
             <div>
-              <h2>Dark</h2>
+              <h2>Dark #1A1E2E</h2>
               <div className="h-10 bg-dark"></div>
             </div>
             <div>
@@ -29,7 +29,7 @@ export default function Components() {
               <div className="h-10 bg-background border"></div>
             </div>
             <div>
-              <h2>Foreground</h2>
+              <h2>Foreground #121826</h2>
               <div className="h-10 bg-foreground"></div>
             </div>
             <div>
@@ -46,15 +46,15 @@ export default function Components() {
             </div>
             <div>
               <h2>Warning</h2>
-              <div className="h-10 bg-muted-warning"></div>
+              <div className="h-10 bg-warning"></div>
             </div>
             <div>
               <h2>Success</h2>
-              <div className="h-10 bg-muted-success"></div>
+              <div className="h-10 bg-success"></div>
             </div>
             <div>
               <h2>Info</h2>
-              <div className="h-10 bg-muted-info"></div>
+              <div className="h-10 bg-info"></div>
             </div>
           </div>
         </div>
