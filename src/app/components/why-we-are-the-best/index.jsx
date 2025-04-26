@@ -1,3 +1,7 @@
 export default function WhyWeAreTheBest() {
-  return <div>WhyWeAreTheBest</div>;
+  return (
+    <section>
+      <div className="container">WhyWeAreTheBest</div>
+    </section>
+  );
 }
