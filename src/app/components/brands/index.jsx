@@ -15,7 +15,7 @@ const logos = [
 
 export default function Brands() {
   return (
-    <div className="w-full py-10 overflow-hidden">
+    <section className="w-full py-10 overflow-hidden">
       <h2 className="font-inter font-medium text-xl lg:text-2xl leading-[30px] tracking-normal text-center mb-8">
         Since 2016, publications & convention presentations from our founder
       </h2>
@@ -45,6 +45,6 @@ export default function Brands() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
