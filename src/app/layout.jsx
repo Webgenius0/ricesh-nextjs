@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
         className={`${inter.variable} ${outfit.variable} ${poppins.variable} antialiased`}
       >
         <Header />
-        <Navbar />
+        {/* <Navbar /> */}
         {children}
       </body>
     </html>
