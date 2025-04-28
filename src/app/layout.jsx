@@ -1,5 +1,4 @@
 import Footer from '@/components/footer';
-import Header from '@/components/header';
 import Navbar from '@/components/navbar';
 import { Inter, Outfit, Poppins } from 'next/font/google';
 import './globals.css';
@@ -36,7 +35,7 @@ export default function RootLayout({ children }) {
       >
         <Providers>
           <>
-            <Header />
+            {/* <Header /> */}
             <Navbar />
             {children}
             <Footer />
