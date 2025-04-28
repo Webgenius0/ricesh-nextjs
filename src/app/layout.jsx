@@ -1,7 +1,9 @@
+import Footer from '@/components/footer';
 import Header from '@/components/header';
 import Navbar from '@/components/navbar';
 import { Inter, Outfit, Poppins } from 'next/font/google';
 import './globals.css';
+import Providers from './providers';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -32,9 +34,14 @@ export default function RootLayout({ children }) {
       <body
         className={`${inter.variable} ${outfit.variable} ${poppins.variable} antialiased`}
       >
-        <Header />
-        <Navbar />
-        {children}
+        <Providers>
+          <>
+            <Header />
+            <Navbar />
+            {children}
+            <Footer />
+          </>
+        </Providers>
       </body>
     </html>
   );
