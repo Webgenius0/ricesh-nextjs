@@ -83,6 +83,63 @@ export default function OurMission() {
                       Beatae, incidunt.
                     </p>
                   </div>
+                  <div className="flex items-center bg-[#1A1E2E99] rounded-full p-2 gap-2 cursor-pointer">
+                    <div className="bg-primary rounded-full shadow-lg text-foreground w-fit">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M9 15.714V8.287q0-.368.244-.588q.243-.22.568-.22q.102 0 .213.028q.11.027.211.083l5.843 3.733q.186.13.28.298q.093.167.093.379t-.093.379t-.28.298l-5.843 3.733q-.101.055-.213.083t-.213.028q-.326 0-.568-.22T9 15.714"
+                        />
+                      </svg>
+                    </div>
+                    <p className="text-sm sm:text-base leading-[24px] text-dark-foreground">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Beatae, incidunt.
+                    </p>
+                  </div>
+                  <div className="flex items-center bg-[#1A1E2E99] rounded-full p-2 gap-2 cursor-pointer">
+                    <div className="bg-primary rounded-full shadow-lg text-foreground w-fit">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M9 15.714V8.287q0-.368.244-.588q.243-.22.568-.22q.102 0 .213.028q.11.027.211.083l5.843 3.733q.186.13.28.298q.093.167.093.379t-.093.379t-.28.298l-5.843 3.733q-.101.055-.213.083t-.213.028q-.326 0-.568-.22T9 15.714"
+                        />
+                      </svg>
+                    </div>
+                    <p className="text-sm sm:text-base leading-[24px] text-dark-foreground">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Beatae, incidunt.
+                    </p>
+                  </div>
+                  <div className="flex items-center bg-[#1A1E2E99] rounded-full p-2 gap-2 cursor-pointer">
+                    <div className="bg-primary rounded-full shadow-lg text-foreground w-fit">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M9 15.714V8.287q0-.368.244-.588q.243-.22.568-.22q.102 0 .213.028q.11.027.211.083l5.843 3.733q.186.13.28.298q.093.167.093.379t-.093.379t-.28.298l-5.843 3.733q-.101.055-.213.083t-.213.028q-.326 0-.568-.22T9 15.714"
+                        />
+                      </svg>
+                    </div>
+                    <p className="text-sm sm:text-base leading-[24px] text-dark-foreground">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Beatae, incidunt.
+                    </p>
+                  </div>
                 </div>
               </div>
             )}

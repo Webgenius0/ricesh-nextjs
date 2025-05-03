@@ -13,7 +13,7 @@ export default function Home() {
       <Brands />
       <WhyWeAreTheBest />
       <OurMission />
-      {/* <OurSpecialization /> */}
+      <OurSpecialization />
       {/* <WhyChooseUs /> */}
       {/* <WhatDrivesUs /> */}
       {/* <WeWontSettle /> */}
