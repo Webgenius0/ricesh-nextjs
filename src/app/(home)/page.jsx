@@ -6,6 +6,7 @@ import WhyWeAreTheBest from "./components/why-we-are-the-best";
 import OurSpecialization from "./components/our-specialization";
 import Components from "./components/components";
 import WhyChooseUs from "./components/why-choose-us";
+import WhatDrivesUs from "./components/what-drives-us";
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
       <OurMission />
       <OurSpecialization />
       <WhyChooseUs />
-      {/* <WhatDrivesUs /> */}
+      <WhatDrivesUs />
       {/* <WeWontSettle /> */}
       {/* <WorkingWithUs /> */}
       {/* <Testimonials /> */}
