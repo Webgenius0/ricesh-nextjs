@@ -1,35 +1,36 @@
 import Clipboard from "@/assets/SVG/Clipboard";
 import { Card } from "@/components/ui/card";
 
+const withUs = [
+  {
+    icon: <Clipboard />,
+    text: "Confident, equipped supervisors and supervisees",
+  },
+  {
+    icon: <Clipboard />,
+    text: "Ethical use of AI that benefits patient, provider and caregivers.",
+  },
+  {
+    icon: <Clipboard />,
+    text: "Career satisfaction with on time licensure & certification renewals",
+  },
+];
+const withOutUs = [
+  {
+    icon: <Clipboard />,
+    text: "Unresolved conflict and imposter syndrome in supervision.",
+  },
+  {
+    icon: <Clipboard />,
+    text: "Chaotic, sporadic use of AI with inconsistent results",
+  },
+  {
+    icon: <Clipboard />,
+    text: "Severe burnout & disillusionment, missing certification and licensure requirements",
+  },
+];
+
 export default function WhyChooseUs() {
-  const withUs = [
-    {
-      icon: <Clipboard />,
-      text: "Confident, equipped supervisors and supervisees",
-    },
-    {
-      icon: <Clipboard />,
-      text: "Ethical use of AI that benefits patient, provider and caregivers.",
-    },
-    {
-      icon: <Clipboard />,
-      text: "Career satisfaction with on time licensure & certification renewals",
-    },
-  ];
-  const withOutUs = [
-    {
-      icon: <Clipboard />,
-      text: "Unresolved conflict and imposter syndrome in supervision.",
-    },
-    {
-      icon: <Clipboard />,
-      text: "Chaotic, sporadic use of AI with inconsistent results",
-    },
-    {
-      icon: <Clipboard />,
-      text: "Severe burnout & disillusionment, missing certification and licensure requirements",
-    },
-  ];
   return (
     <section>
       <div className="container py-[100px]">

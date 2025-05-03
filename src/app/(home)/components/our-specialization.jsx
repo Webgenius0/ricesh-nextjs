@@ -5,26 +5,26 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
 
-export default function OurSpecialization() {
-  const weSpecializeIn = [
-    {
-      icon: <Clipboard />,
-      title: "Supervision, AI and Burnout Continuing Education",
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-      link_text: "Learn more",
-      link_url: "#",
-    },
-    {
-      icon: <OpenBook />,
-      title: "Neurodivergent friendly, trauma informed",
-      description:
-        "All of our trainings are created with you in mind. We love clear, efficient, visually structured presntations. Our audio-visual mind maps throughout courses help increase retention and engagement. Our content is made considering the vast backgrounds of our clinicians.",
-      link_text: "Learn more",
-      link_url: "#",
-    },
-  ];
+const weSpecializeIn = [
+  {
+    icon: <Clipboard />,
+    title: "Supervision, AI and Burnout Continuing Education",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+    link_text: "Learn more",
+    link_url: "#",
+  },
+  {
+    icon: <OpenBook />,
+    title: "Neurodivergent friendly, trauma informed",
+    description:
+      "All of our trainings are created with you in mind. We love clear, efficient, visually structured presntations. Our audio-visual mind maps throughout courses help increase retention and engagement. Our content is made considering the vast backgrounds of our clinicians.",
+    link_text: "Learn more",
+    link_url: "#",
+  },
+];
 
+export default function OurSpecialization() {
   return (
     <section>
       <div className="container py-[100px]">
@@ -52,7 +52,7 @@ export default function OurSpecialization() {
               </p>
               <Link
                 href={data?.link_url}
-                className="text-primary underline w-fit flex items-center gap-1 text-lg font-inter font-light group"
+                className="text-primary underline w-fit flex items-center gap-1 text-lg font-light group"
               >
                 {data?.link_text}
                 <div className="transition-all duration-200 group-hover:pl-2">
