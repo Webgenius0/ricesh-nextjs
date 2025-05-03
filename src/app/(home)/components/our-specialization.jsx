@@ -27,7 +27,7 @@ export default function OurSpecialization() {
 
   return (
     <section>
-      <div className="container">
+      <div className="container py-[100px]">
         <div className="flex justify-between items-end">
           <div className="w-1/2">
             <h1 className="text-[32px] sm:text-[38px] lg:text-[44px] xl:text-[50px] font-semibold sm:leading-[72px] font-outfit text-foreground mb-3">
