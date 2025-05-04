@@ -24,8 +24,8 @@ export default function Home() {
       <WeWontSettle />
       {/* <WorkingWithUs /> */}
       <Testimonials />
-      <Components />
       <GetInTouch />
+      <Components />
     </>
   );
 }
