@@ -7,6 +7,7 @@ import OurSpecialization from "./components/our-specialization";
 import Components from "./components/components";
 import WhyChooseUs from "./components/why-choose-us";
 import WhatDrivesUs from "./components/what-drives-us";
+import WeWontSettle from "./components/we-wont-settle";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
       <OurSpecialization />
       <WhyChooseUs />
       <WhatDrivesUs />
-      {/* <WeWontSettle /> */}
+      <WeWontSettle />
       {/* <WorkingWithUs /> */}
       {/* <Testimonials /> */}
       <Components />
