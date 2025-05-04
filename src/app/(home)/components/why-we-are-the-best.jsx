@@ -1,30 +1,30 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { CircleCheck } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CircleCheck } from "lucide-react";
 
 const problems = [
   {
     id: 1,
     label:
-      'Supervisors and supervisees report high levels of stressful situations',
+      "Supervisors and supervisees report high levels of stressful situations",
   },
   {
     id: 2,
     label:
-      'Clinicians have limited guiding principles for successfully, efficiently implementing AI',
+      "Clinicians have limited guiding principles for successfully, efficiently implementing AI",
   },
   {
     id: 3,
-    label: 'Career burnout is at an all time high',
+    label: "Career burnout is at an all time high",
   },
   {
     id: 4,
     label:
-      'State & national licensure & certification renewals can be confusing',
+      "State & national licensure & certification renewals can be confusing",
   },
   {
     id: 5,
     label:
-      'Continuing education courses not designed for neurodivergent access',
+      "Continuing education courses not designed for neurodivergent access",
   },
 ];
 
@@ -32,46 +32,46 @@ const solutions = [
   {
     id: 1,
     label:
-      'Comprehensive supervision certification gives you confidence for any situation',
+      "Comprehensive supervision certification gives you confidence for any situation",
   },
   {
     id: 2,
     label:
-      'Ethical, integrated AI training by both a veteran SLP and business professional',
+      "Ethical, integrated AI training by both a veteran SLP and business professional",
   },
   {
     id: 3,
     label:
-      'Proven burnout training by someone who has successfully recovered from burnout',
+      "Proven burnout training by someone who has successfully recovered from burnout",
   },
   {
     id: 4,
     label:
-      'Custom clinician-driven platform helps you easily stay on track with renewals',
+      "Custom clinician-driven platform helps you easily stay on track with renewals",
   },
   {
     id: 5,
     label:
-      'All courses provided in our proprietary neurodivergent-friendly, trauma-informed format',
+      "All courses provided in our proprietary neurodivergent-friendly, trauma-informed format",
   },
 ];
 
 const stats = [
   {
     total: 10,
-    title: 'Lorem ipsum dummy',
+    title: "Lorem ipsum dummy",
   },
   {
     total: 350,
-    title: 'Lorem ipsum dummy',
+    title: "Lorem ipsum dummy",
   },
   {
     total: 500,
-    title: 'Lorem ipsum dummy',
+    title: "Lorem ipsum dummy",
   },
   {
     total: 200,
-    title: 'Reviews',
+    title: "Reviews",
   },
 ];
 
@@ -136,8 +136,8 @@ export default function WhyWeAreTheBest() {
 
           {/* Statitics */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {stats.map((detail) => (
-              <Card className="px-10 py-5 bg-[#FFFF] rounded-[16px]">
+            {stats.map((detail, idx) => (
+              <Card key={idx} className="px-10 py-5 bg-[#FFFF] rounded-[16px]">
                 <CardContent
                   className={`flex flex-col items-center gap-2 px-0`}
                 >
