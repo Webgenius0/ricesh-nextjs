@@ -105,7 +105,7 @@ function Step({ stepInfo, index }) {
         }`}
       >
         <div
-          class={`w-0 h-0 absolute ${
+          className={`w-0 h-0 absolute ${
             index % 2 === 0
               ? "right-[-15px] -rotate-90 "
               : "left-[-15px] rotate-90 "
