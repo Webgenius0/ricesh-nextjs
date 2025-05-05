@@ -28,6 +28,8 @@ const links = [
   },
 ];
 
+const transparentRoutes = ['/'];
+
 export default function Navbar() {
   const pathname = usePathname();
   const [bgColor, setBgColor] = useState('transparent');
@@ -35,8 +37,16 @@ export default function Navbar() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
 
   useEffect(() => {
+    if (!transparentRoutes.includes(pathname)) {
+      setBgColor('white');
+    } else {
+      setBgColor('transparent');
+    }
+
     const changeBackground = () => {
-      if (window.scrollY >= window.innerHeight * 0.8 - 88) {
+      if (!transparentRoutes.includes(pathname)) {
+        setBgColor('white');
+      } else if (window.scrollY >= window.innerHeight * 0.8 - 88) {
         setBgColor('white');
       } else if (window.scrollY >= 100) {
         setBgColor('semi-transparent');
@@ -47,7 +57,7 @@ export default function Navbar() {
 
     window.addEventListener('scroll', changeBackground);
     return () => window.removeEventListener('scroll', changeBackground);
-  }, []);
+  }, [pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -78,17 +88,19 @@ export default function Navbar() {
       <div className="container flex justify-between items-center">
         <div className="flex gap-[72px] items-center">
           {/* Logo */}
-          <h2
-            className={cn(
-              'font-semibold text-[26px] leading-[100%] tracking-[0%] text-foreground',
-              {
-                'text-background':
-                  bgColor === 'semi-transparent' || bgColor === 'transparent',
-              }
-            )}
-          >
-            Speechceu.com
-          </h2>
+          <Link href="/">
+            <h2
+              className={cn(
+                'font-semibold text-[26px] leading-[100%] tracking-[0%] text-foreground',
+                {
+                  'text-background':
+                    bgColor === 'semi-transparent' || bgColor === 'transparent',
+                }
+              )}
+            >
+              Speechceu.com
+            </h2>
+          </Link>
           <div className="flex gap-5 items-center">
             {links.map((item) => (
               <Link
