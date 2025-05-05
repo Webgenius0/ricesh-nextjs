@@ -18,15 +18,9 @@ const EducationBanner = () => {
           skills, enhance communication, and support the next generation of
           speech-language pathologists.
         </p>
-        <h4 className="text-base text-dark-foreground mb-8">
-          Lorem, Lorem
-        </h4>
-        <h4 className="text-base text-dark-foreground mb-3">
-          S1 | 24/03/25
-        </h4>
-        <h4 className="text-base text-dark-foreground mb-10">
-          Lorem ipsum
-        </h4>
+        <h4 className="text-base text-dark-foreground mb-8">Lorem, Lorem</h4>
+        <h4 className="text-base text-dark-foreground mb-3">S1 | 24/03/25</h4>
+        <h4 className="text-base text-dark-foreground mb-10">Lorem ipsum</h4>
         <Button className="bg-secondary w-fit">Start Course</Button>
       </div>
     </section>
