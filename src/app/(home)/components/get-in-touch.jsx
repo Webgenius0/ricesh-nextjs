@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import Clipboard from "@/assets/SVG/Clipboard";
-import { Button } from "@/components/ui/button";
+import Clipboard from '@/assets/SVG/Clipboard';
+import { Button } from '@/components/ui/button';
 import {
   Form,
   FormControl,
@@ -9,17 +9,14 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useGetInTouch } from "@/hooks/contact.hook";
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { useGetInTouch } from '@/hooks/contact.hook';
 
 export default function GetInTouch() {
   const { form, mutate, isPending } = useGetInTouch();
-  function onSubmit(values) {
-    console.log("Form values:", values);
-    mutate(data);
-  }
+
   return (
     <section>
       <div className="container flex items-center gap-6 py-[100px]">
@@ -29,7 +26,7 @@ export default function GetInTouch() {
           </h1>
           <Form {...form}>
             <form
-              onSubmit={form.handleSubmit(onSubmit)}
+              onSubmit={form.handleSubmit(mutate)}
               className="max-w-fullrounded-sm bg-[#FFF] flex flex-col gap-4"
             >
               <div className="w-full flex flex-col sm:flex-row gap-4">
@@ -122,7 +119,7 @@ export default function GetInTouch() {
                 disabled={isPending}
                 className="py-5 px-6 rounded-[60px]  cursor-pointer flex text-base font-medium text-[#FFF] mt-1 w-fit"
               >
-                {isPending ? "Submitting" : "Submit"}
+                {isPending ? 'Submitting' : 'Submit'}
               </Button>
             </form>
           </Form>
@@ -163,7 +160,7 @@ export default function GetInTouch() {
           <Button
             type="button"
             className="w-fit"
-            variant={"default"}
+            variant={'default'}
             size="default"
           >
             Discover more
