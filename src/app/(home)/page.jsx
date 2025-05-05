@@ -25,7 +25,7 @@ export default function Home() {
       <WorkingWithUs />
       <Testimonials />
       <GetInTouch />
-      <Components />
+      {/* <Components /> */}
     </>
   );
 }
