@@ -1,3 +1,15 @@
+import ArrowRight from "@/assets/SVG/ArrowRight";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
+import Link from "next/link";
+
 const cardInformation = [
   {
     number: 1,
@@ -43,11 +55,14 @@ const cardInformation = [
 
 export default function TopicIndex({ topicId }) {
   return (
-    <div>
-      <div className="grid grid-cols-4 gap-8">
+    <div className="mt-[52px] mb-20">
+      <div className="grid grid-cols-4 gap-8 mb-12">
         {cardInformation?.map((cardInfo, idx) => (
           <Card key={idx} cardInfo={cardInfo} />
         ))}
+      </div>
+      <div className="mt-12">
+        <TopicIndexPagination />
       </div>
     </div>
   );
@@ -55,21 +70,79 @@ export default function TopicIndex({ topicId }) {
 
 function Card({ cardInfo }) {
   return (
-    <div
+    <Link
+      href={"/"}
       style={{ backgroundImage: `url(${cardInfo?.image})` }}
-      className="bg-cover bg-center min-h-[450px] w-full flex items-end rounded-[12px]"
+      className="bg-cover bg-center min-h-[450px] w-full flex items-end rounded-[12px] group"
     >
       <div className="relative">
-        <div className="absolute w-full h-full bg-[linear-gradient(180deg,rgba(3,0,1,0)_0%,#030001_100%)] rounded-b-[12px]"></div>
+        <div className="absolute bottom-0 w-full h-full bg-[linear-gradient(180deg,rgba(3,0,1,0)_0%,#030001_100%)] rounded-b-[11px]"></div>
         <div className="relative pb-[26px] px-4 flex justify-between items-end">
           <h1 className="text-[120px] text-dark font-extrabold translate-y-[43px] translate-x-[-34px] font-outfit text-shadow-[-1px_-1px_0_#fff,1px_-1px_0_#fff,-1px_1px_0_#fff,1px_1px_0_#fff]">
             {cardInfo?.number}
           </h1>
-          <h4 className="text-xl font-semibold text-white line-clamp-2 overflow-hidden translate-x-[-20px]">
-            {cardInfo?.title}
-          </h4>
+          <div>
+            <h4 className="text-xl font-semibold text-white line-clamp-2 overflow-hidden translate-x-[-20px]">
+              {cardInfo?.title}
+            </h4>
+            <div className="w-0 h-0.5 bg-white translate-x-[-20px]  transition-all duration-700 group-hover:w-full rounded-full"></div>
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
+  );
+}
+
+function TopicIndexPagination() {
+  return (
+    <Pagination>
+      <PaginationContent className="space-x-6">
+        <PaginationItem>
+          <PaginationPrevious className="bg-white/10 text-white hover:text-white h-[48px] w-[48px] hover:bg-primary rotate-180">
+            <ArrowRight />
+          </PaginationPrevious>
+        </PaginationItem>
+
+        <div className="flex items-center gap-2">
+          <PaginationItem>
+            <PaginationLink
+              className="rounded-full h-[48px] w-[48px] border-none bg-white/10 data-active:text-white data-active:bg-primary cursor-pointer select-none hover:bg-secondary/10"
+              isActive
+            >
+              1
+            </PaginationLink>
+          </PaginationItem>
+          <PaginationItem>
+            <PaginationLink className="rounded-full h-[48px] w-[48px] border-none bg-white/10 text-white data-active:text-white data-active:bg-primary cursor-pointer select-none">
+              2
+            </PaginationLink>
+          </PaginationItem>
+
+          <PaginationItem>
+            <PaginationEllipsis className="rounded-full h-[48px] w-[48px] border-none bg-white/10 text-white data-active:text-white data-active:bg-primary cursor-pointer select-none" />
+          </PaginationItem>
+
+          <PaginationItem>
+            <PaginationLink
+              className="rounded-full h-[48px] w-[48px] border-none bg-white/10 data-active:text-white data-active:bg-primary cursor-pointer select-none hover:bg-secondary/10"
+              isActive
+            >
+              5
+            </PaginationLink>
+          </PaginationItem>
+          <PaginationItem>
+            <PaginationLink className="rounded-full h-[48px] w-[48px] border-none bg-white/10 text-white data-active:text-white data-active:bg-primary cursor-pointer select-none">
+              6
+            </PaginationLink>
+          </PaginationItem>
+        </div>
+
+        <PaginationItem>
+          <PaginationNext className="bg-white/10 text-white hover:text-white h-[48px] w-[48px] hover:bg-primary">
+            <ArrowRight />
+          </PaginationNext>
+        </PaginationItem>
+      </PaginationContent>
+    </Pagination>
   );
 }

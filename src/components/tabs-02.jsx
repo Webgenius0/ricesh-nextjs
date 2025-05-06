@@ -1,6 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-export default function TabsUnderlinedDemo({ tabs }) {
+export default function TabsUnderlined({ tabs }) {
   return (
     <Tabs defaultValue={tabs[0].value} className="w-full gap-0">
       <div className="container">
@@ -18,7 +18,7 @@ export default function TabsUnderlinedDemo({ tabs }) {
       </div>
       {tabs.map((tab) => (
         <TabsContent key={tab.value} value={tab.value} className="bg-dark">
-          <div className="container py-10">{tab.component}</div>
+          <div className="container">{tab.component}</div>
         </TabsContent>
       ))}
     </Tabs>

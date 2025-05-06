@@ -1,7 +1,7 @@
-import TabsUnderlinedDemo from "@/components/tabs-02";
 import VerticalBorderedTabs from "@/components/tabs-17";
 import React from "react";
 import TopicIndex from "./topic-index";
+import TabsUnderlined from "@/components/tabs-02";
 
 const bigTabs = [
   {
@@ -64,7 +64,7 @@ export default function LearningModules() {
       </div>
       <div>
         <div className="mt-9">
-          <TabsUnderlinedDemo tabs={bigTabs} />
+          <TabsUnderlined tabs={bigTabs} />
         </div>
       </div>
     </section>
