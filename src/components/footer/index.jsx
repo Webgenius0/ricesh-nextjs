@@ -1,3 +1,8 @@
+import Facebook from "@/assets/SVG/Facebook";
+import Instagram from "@/assets/SVG/Instagram";
+import LikedIn from "@/assets/SVG/LikedIn";
+import WhatsApp from "@/assets/SVG/WhatsApp";
+
 const socialMediaLinks = [
   {
     name: "Facebook",
@@ -35,29 +40,6 @@ export default function Footer() {
           </p>
         </div>
         <div className="flex justify-between w-3/5">
-          {/* <div>
-            <h5 className="font-outfit font-semibold text-xl leading-[72px] tracking-[0%] text-white">
-              Quick Links
-            </h5>
-            <ul className="space-y-4 mt-6">
-              <li>
-                <a
-                  className="text-lg leading-[24px] text-white/65 hover:underline"
-                  href="#"
-                >
-                  Continuing Education
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-lg leading-[24px] text-white/65 hover:underline"
-                  href="#"
-                >
-                  Continuing Education
-                </a>
-              </li>
-            </ul>
-          </div> */}
           <QuickLinks
             title="Quick Links"
             links={[
@@ -97,7 +79,11 @@ export default function Footer() {
         </div>
         <div className="w-1/2 flex items-center justify-end gap-x-4">
           {socialMediaLinks?.map((info, idx) => (
-            <a key={idx} href={info?.link} className="bg-white/10 w-10 h-10 rounded-full flex items-center justify-center">
+            <a
+              key={idx}
+              href={info?.link}
+              className="bg-white/10 w-10 h-10 rounded-full flex items-center justify-center"
+            >
               <div className="!w-6 !text-white">{info?.icon}</div>
             </a>
           ))}
@@ -106,12 +92,6 @@ export default function Footer() {
     </footer>
   );
 }
-
-import Facebook from "@/assets/SVG/Facebook";
-import Instagram from "@/assets/SVG/Instagram";
-import LikedIn from "@/assets/SVG/LikedIn";
-import WhatsApp from "@/assets/SVG/WhatsApp";
-import React from "react";
 
 function QuickLinks({ title = "Quick Links", links = [] }) {
   return (
