@@ -10,7 +10,7 @@ export default function Page() {
       <TopicBanner />
       <TopicContent />
       <GetInTouch theme={"dark"} />
-      <Components />
+      {/* <Components /> */}
     </div>
   );
 }

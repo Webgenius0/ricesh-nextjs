@@ -1,33 +1,37 @@
 import TabsUnderlined from "@/components/tabs-02";
-import TopicIndex from "../../components/topic-index";
+import WhoShouldAttendThisCourse from "./who-should-attend-this-course";
 
 const bigTabs = [
   {
-    name: "Supervision",
-    value: "supervision",
-    component: <TopicIndex topicId="supervision" />,
+    name: "Who should attend this course",
+    value: "who-should-attend-this-course",
+    component: <WhoShouldAttendThisCourse />,
   },
   {
-    name: "AI",
-    value: "ai",
-    component: <TopicIndex topicId="ai" />,
+    name: "Learning Outcomes",
+    value: "learning_outcomes",
+    component: <h1 className="text-white text-3xl py-7">Learning Outcomes</h1>,
   },
   {
-    name: "Burnout",
-    value: "burnout",
-    component: <TopicIndex topicId="burnout" />,
+    name: "Agenda",
+    value: "agenda",
+    component:  <h1 className="text-white text-3xl py-7">Agenda</h1>,
   },
   {
-    name: "Patient stories",
-    value: "patient-stories",
-    component: <TopicIndex topicId="patient-stories" />,
+    name: "Exam",
+    value: "exam",
+    component:  <h1 className="text-white text-3xl py-7">Exam</h1>,
   },
 ];
 export default function TopicContent() {
   return (
     <section>
-      <div className="container">
-        <TabsUnderlined tabs={bigTabs} />
+      <div className="">
+        <TabsUnderlined
+          tabs={bigTabs}
+          containerClassName="bg-foreground pt-14"
+          tabsTriggerClassName="text-white"
+        />
       </div>
     </section>
   );
