@@ -13,43 +13,51 @@ import Link from "next/link";
 const cardInformation = [
   {
     number: 1,
-    title: "Introduction to Supervision in Speech-Language Pathology ",
+    title: "Introduction to Supervision in Speech-Language Pathology",
     image: "/images/card_img_1.webp",
+    link: "education/introduction-to-supervision-in-speech-language-pathology",
   },
   {
     number: 2,
-    title: "Core Principles of Effective Supervision ",
+    title: "Core Principles of Effective Supervision",
     image: "/images/card_img_2.jpg",
+    link: "education/core-principles-of-effective-supervision",
   },
   {
     number: 3,
-    title: "Roles and Responsibilities of a Supervisor ",
+    title: "Roles and Responsibilities of a Supervisor",
     image: "/images/card_img_3.jpg",
+    link: "education/roles-and-responsibilities-of-a-supervisor",
   },
   {
     number: 4,
-    title: "Building a Strong Supervisor-Supervisee Relationship ",
+    title: "Building a Strong Supervisor-Supervisee Relationship",
     image: "/images/card_img_4.jpg",
+    link: "education/building-a-strong-supervisor-supervisee-relationship",
   },
   {
     number: 5,
-    title: "Creating a Positive Supervision Environment ",
+    title: "Creating a Positive Supervision Environment",
     image: "/images/card_img_5.webp",
+    link: "education/creating-a-positive-supervision-environment",
   },
   {
     number: 6,
-    title: "The Importance of Reflective Practice in Supervision ",
+    title: "The Importance of Reflective Practice in Supervision",
     image: "/images/card_img_6.jpg",
+    link: "education/the-importance-of-reflective-practice-in-supervision",
   },
   {
     number: 7,
-    title: "Supervision Ethics and Professional Standards ",
+    title: "Supervision Ethics and Professional Standards",
     image: "/images/card_img_7.jpg",
+    link: "education/supervision-ethics-and-professional-standards",
   },
   {
     number: 8,
-    title: " Balancing Support and Accountability in Supervision",
+    title: "Balancing Support and Accountability in Supervision",
     image: "/images/card_img_8.jpg",
+    link: "education/balancing-support-and-accountability-in-supervision",
   },
 ];
 
@@ -71,7 +79,7 @@ export default function TopicIndex({ topicId }) {
 function Card({ cardInfo }) {
   return (
     <Link
-      href={"/"}
+      href={cardInfo?.link}
       style={{ backgroundImage: `url(${cardInfo?.image})` }}
       className="bg-cover bg-center min-h-[450px] w-full flex items-end rounded-[12px] group"
     >
