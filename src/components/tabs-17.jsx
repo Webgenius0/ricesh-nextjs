@@ -1,29 +1,12 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
-import { Bot, Settings, User } from "lucide-react";
 import React from "react";
 
-const tabs = [
-  {
-    value: "start",
-    text: "Start",
-  },
-  {
-    value: "skill",
-    text: "Skill",
-  },
-  {
-    value: "summit",
-    text: "Summit",
-  },
-];
-
-const VerticalBorderedTabs = () => {
+const VerticalBorderedTabs = ({ className, tabs }) => {
   return (
     <Tabs
       defaultValue={tabs[0].value}
-      // orientation="vertical"
-      className="w-full flex items-start justify-center gap-2"
+      className={cn("w-full flex items-start justify-center gap-2", className)}
     >
       <TabsList className="flex h-auto p-0 divide-y border-4 border-dark-foreground/15 shrink-0">
         {tabs.map((item) => (

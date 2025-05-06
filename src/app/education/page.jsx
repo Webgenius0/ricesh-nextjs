@@ -3,13 +3,13 @@ import Components from "../(home)/components/components";
 import GetInTouch from "../../components/shared/get-in-touch";
 import EducationBanner from "./components/education-banner";
 import SpeechCeu from "@/components/shared/speech-ceu";
-import Supervision from "./components/supervision";
+import LearningModules from "./components/learning-modules";
 
 export default function Page() {
   return (
     <div>
       <EducationBanner />
-      <Supervision />
+      <LearningModules />
       <SpeechCeu />
       <WhatDrivesUs
         backgroundImage="/images/banner.jpg"
