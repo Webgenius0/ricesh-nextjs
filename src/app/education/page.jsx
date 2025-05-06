@@ -18,7 +18,7 @@ export default function Page() {
         buttonText="Discover more"
       />
       <GetInTouch />
-      <Components />
+      {/* <Components /> */}
     </div>
   );
 }
