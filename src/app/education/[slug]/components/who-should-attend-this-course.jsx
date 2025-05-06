@@ -86,6 +86,9 @@ export default function WhoShouldAttendThisCourse() {
             </ul>
           </div>
         </div>
+        <div className="w-3/4 rounded-2xl overflow-hidden">
+          <img className="w-full" src="/images/card_image.png" alt="" />
+        </div>
         <div className="w-3/5">
           <Title
             text="Professional Conduct & Nondiscrimination Policy"

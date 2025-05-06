@@ -10,17 +10,32 @@ const bigTabs = [
   {
     name: "Learning Outcomes",
     value: "learning_outcomes",
-    component: <h1 className="text-white text-3xl py-7">Learning Outcomes</h1>,
+    component: (
+      <div>
+        <h1 className="text-white text-3xl py-7">Learning Outcomes</h1>
+        <WhoShouldAttendThisCourse />
+      </div>
+    ),
   },
   {
     name: "Agenda",
     value: "agenda",
-    component:  <h1 className="text-white text-3xl py-7">Agenda</h1>,
+    component: (
+      <div>
+        <h1 className="text-white text-3xl py-7">Agenda</h1>
+        <WhoShouldAttendThisCourse />
+      </div>
+    ),
   },
   {
     name: "Exam",
     value: "exam",
-    component:  <h1 className="text-white text-3xl py-7">Exam</h1>,
+    component: (
+      <div>
+        <h1 className="text-white text-3xl py-7">Exam</h1>
+        <WhoShouldAttendThisCourse />
+      </div>
+    ),
   },
 ];
 export default function TopicContent() {
