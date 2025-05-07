@@ -32,7 +32,7 @@ const withOutUs = [
 
 export default function WhyChooseUs() {
   return (
-    <section>
+    <section data-aos="fade-up">
       <div className="container py-[100px]">
         <h1 className="text-[32px] sm:text-[38px] lg:text-[44px] xl:text-[50px] font-semibold sm:leading-[72px] font-outfit text-foreground mb-3 text-center">
           Why Choose Us?
@@ -50,7 +50,7 @@ export default function WhyChooseUs() {
                   className="p-6 rounded-lg flex-row items-center gap-3"
                   key={idx}
                 >
-                  <div className=" bg-[#00C2C71A] rounded-full w-fit p-5">
+                  <div className=" bg-primary/10 rounded-full w-fit p-5">
                     <div className="w-10 text-primary">{info?.icon}</div>
                   </div>
                   <p className="text-xl font-bold text-muted-foreground leading-relaxed">
@@ -72,7 +72,7 @@ export default function WhyChooseUs() {
                   className="p-6 rounded-lg flex-row items-center gap-3"
                   key={idx}
                 >
-                  <div className=" bg-[#B1B1B11A] rounded-full w-fit p-5">
+                  <div className=" bg-secondary/10 rounded-full w-fit p-5">
                     <div className="w-10 text-dark-foreground">
                       {info?.icon}
                     </div>

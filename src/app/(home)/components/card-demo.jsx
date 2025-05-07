@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button';
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -6,11 +6,11 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
+} from "@/components/ui/card";
 
 export function CardDemo() {
   return (
-    <Card className="w-[350px]">
+    <Card className="w-[350px]" data-aos="fade-up">
       <CardHeader>
         <CardTitle>Card Title</CardTitle>
         <CardDescription>Card subtitle</CardDescription>

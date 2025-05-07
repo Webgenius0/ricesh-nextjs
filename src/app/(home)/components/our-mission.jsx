@@ -11,7 +11,7 @@ export default function OurMission() {
     videoRef.current.play();
   };
   return (
-    <section>
+    <section data-aos="fade-up">
       <div className="container grid grid-cols-2 gap-20 py-[100px]">
         <div className="flex flex-col gap-5">
           <div>

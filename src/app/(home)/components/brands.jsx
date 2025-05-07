@@ -17,7 +17,7 @@ const logos = [
 
 export default function Brands() {
   return (
-    <section className="w-full py-10 overflow-hidden ">
+    <section className="w-full py-10 overflow-hidden" data-aos="fade-up">
       <h2 className="font-inter font-medium text-xl lg:text-2xl leading-[30px] tracking-normal text-center mb-8 text-gray-700">
         Since 2016, publications & convention presentations from our founder
       </h2>

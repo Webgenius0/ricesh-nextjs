@@ -3,7 +3,7 @@ import { CardDemo } from './card-demo';
 
 export default function Components() {
   return (
-    <div className="min-h-screen flex justify-center items-center flex-col gap-20 py-20">
+    <div className="min-h-screen flex justify-center items-center flex-col gap-20 py-20" data-aos="fade-up">
       <div>
         <div>
           <h1>Colors</h1>
