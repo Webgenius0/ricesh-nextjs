@@ -81,19 +81,19 @@ function Card({ cardInfo }) {
     <Link
       href={cardInfo?.link}
       style={{ backgroundImage: `url(${cardInfo?.image})` }}
-      className="bg-cover bg-center min-h-[450px] w-full flex items-end rounded-[12px] group"
+      className="bg-cover bg-center min-h-[450px] w-full flex items-end rounded-[12px] group transition-all duration-300 hover:scale-[99%]"
     >
       <div className="relative">
         <div className="absolute bottom-0 w-full h-full bg-[linear-gradient(180deg,rgba(3,0,1,0)_0%,#030001_100%)] rounded-b-[11px]"></div>
         <div className="relative pb-[26px] px-4 flex justify-between items-end">
-          <h1 className="text-[120px] text-dark font-extrabold translate-y-[43px] translate-x-[-34px] font-outfit text-shadow-[-1px_-1px_0_#fff,1px_-1px_0_#fff,-1px_1px_0_#fff,1px_1px_0_#fff]">
+          <h1 className="text-[120px] text-dark font-extrabold translate-y-[43px] translate-x-[-34px] group-hover:translate-x-0 transition-all duration-700 font-outfit text-shadow-[-1px_-1px_0_#fff,1px_-1px_0_#fff,-1px_1px_0_#fff,1px_1px_0_#fff]">
             {cardInfo?.number}
           </h1>
           <div>
-            <h4 className="text-xl font-semibold text-white line-clamp-2 overflow-hidden translate-x-[-20px]">
+            <h4 className="text-xl font-semibold text-white line-clamp-2 overflow-hidden translate-x-[-20px] transition-all duration-700 group-hover:translate-x-0">
               {cardInfo?.title}
             </h4>
-            <div className="w-0 h-0.5 bg-white translate-x-[-20px]  transition-all duration-700 group-hover:w-full rounded-full"></div>
+            <div className="w-0 h-0.5 bg-white translate-x-[-20px]  transition-all duration-700 group-hover:w-full group-hover:translate-x-0 rounded-full"></div>
           </div>
         </div>
       </div>
