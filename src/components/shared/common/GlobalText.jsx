@@ -1,9 +1,14 @@
 import { cn } from "@/lib/utils";
 import React from "react";
 
-const GlobalText = ({ children = "This is Heading" }) => {
+const GlobalText = ({ children = "This is Heading", className }) => {
   return (
-    <span className={cn("text-[32px] font-semibold font-outfit text-white")}>
+    <span
+      className={cn(
+        "text-[32px] font-semibold font-outfit text-white",
+        className
+      )}
+    >
       {children}
     </span>
   );
