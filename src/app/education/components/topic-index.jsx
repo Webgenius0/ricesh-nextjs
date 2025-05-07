@@ -63,7 +63,7 @@ const cardInformation = [
 
 export default function TopicIndex({ topicId }) {
   return (
-    <div className="mt-[52px] mb-20">
+    <div className="mt-[52px] mb-20" data-aos="fade-up">
       <div className="grid grid-cols-4 gap-8 mb-12">
         {cardInformation?.map((cardInfo, idx) => (
           <Card key={idx} cardInfo={cardInfo} />

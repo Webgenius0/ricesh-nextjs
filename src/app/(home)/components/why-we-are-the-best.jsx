@@ -77,7 +77,7 @@ const stats = [
 
 export default function WhyWeAreTheBest() {
   return (
-    <section>
+    <section data-aos="fade-up">
       <div className="container flex flex-col gap-10">
         {/* Header */}
         <div className="w-[90%] sm:max-w-[70%] flex flex-col gap-5">

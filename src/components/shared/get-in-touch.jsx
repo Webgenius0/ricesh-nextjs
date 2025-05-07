@@ -47,7 +47,7 @@ export default function GetInTouch({ theme = "light" }) {
   }
 
   return (
-    <section className={`${colors.mainSectionBg}`}>
+    <section className={`${colors.mainSectionBg}`} data-aos="fade-up">
       <div className="container flex items-center gap-6 py-[100px]">
         <div
           className={`basis-[50%] flex flex-col gap-6 p-6 rounded-[24px] ${colors.sectionBg}`}

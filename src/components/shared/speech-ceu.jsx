@@ -106,7 +106,7 @@ const speech_ceu = [
 
 export default function SpeechCeu() {
   return (
-    <section>
+    <section data-aos="fade-up">
       <div className="container py-[100px]">
         <Carousel
           opts={{ align: "center" }}

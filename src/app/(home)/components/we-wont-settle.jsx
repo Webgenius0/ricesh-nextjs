@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export default function WeWontSettle() {
   return (
-    <section>
+    <section data-aos="fade-up">
       <div className="container grid grid-cols-2 gap-10 items-center py-[100px]">
         <div className="rounded-2xl overflow-hidden relative h-full">
           <img

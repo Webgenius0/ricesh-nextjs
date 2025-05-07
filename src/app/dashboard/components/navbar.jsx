@@ -1,5 +1,5 @@
 "use client";
-import GlobalText from "@/components/shared/common/GlobalText";
+import { GlobalText } from "@/components/shared/common/GlobalText";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Link from "next/link";

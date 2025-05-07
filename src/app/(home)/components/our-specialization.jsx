@@ -26,7 +26,7 @@ const weSpecializeIn = [
 
 export default function OurSpecialization() {
   return (
-    <section>
+    <section data-aos="fade-up">
       <div className="container py-[100px]">
         <div className="flex justify-between items-end">
           <div className="w-1/2">

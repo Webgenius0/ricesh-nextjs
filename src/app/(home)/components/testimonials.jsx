@@ -79,7 +79,7 @@ const testimonials = [
 // ====== Main Component ======
 export default function Testimonials() {
   return (
-    <section className="bg-background py-[100px]">
+    <section className="bg-background py-[100px]" data-aos="fade-up">
       <div className="container">
         <Header />
         <div className="mt-10">

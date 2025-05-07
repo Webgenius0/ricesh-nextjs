@@ -27,7 +27,7 @@ const socialMediaLinks = [
 ];
 export default function Footer() {
   return (
-    <footer className="bg-foreground">
+    <footer className="bg-foreground" data-aos="fade-up">
       <div className="container flex gap-x-20 py-16">
         <div className="flex-1">
           <h5 className="font-outfit font-semibold text-[26px] leading-[72px] tracking-[0%] text-white">

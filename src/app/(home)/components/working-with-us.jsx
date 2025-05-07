@@ -46,7 +46,7 @@ const pathway = [
 
 export default function WorkingWithUs() {
   return (
-    <section>
+    <section data-aos="fade-up">
       <div className="container py-[100px]">
         <div>
           <h1 className="font-outfit font-semibold text-[50px] leading-[72px] tracking-[0%] text-foreground mb-9 text-center">

@@ -1,10 +1,11 @@
 import Components from "@/app/(home)/components/components";
 import React from "react";
+import BasedOnYourCareerGoals from "./components/based-on-your-career-goals";
 
 export default function page() {
   return (
     <div>
-      <h1>This Section Is Beautifula</h1>
+      <BasedOnYourCareerGoals />
       <Components />
     </div>
   );

@@ -10,6 +10,7 @@ export default function WhatDrivesUs({
     <section
       className="py-[100px] bg-no-repeat bg-center bg-cover"
       style={{ backgroundImage: `url(${backgroundImage})` }}
+      data-aos="fade-up"
     >
       <div className="container">
         <div className="w-full md:w-1/2">

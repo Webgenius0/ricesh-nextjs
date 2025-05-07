@@ -58,11 +58,11 @@ const tabs = [
 export default function LearningModules() {
   return (
     <section>
-      <div className="container mt-[52px]">
+      <div className="container mt-[52px]" data-aos="fade-up">
         <Header />
         <VerticalBorderedTabs tabs={tabs} />
       </div>
-      <div>
+      <div data-aos="fade-up">
         <div className="mt-9">
           <TabsUnderlined tabs={bigTabs} />
         </div>

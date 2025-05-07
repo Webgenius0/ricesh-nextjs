@@ -32,7 +32,7 @@ const withOutUs = [
 
 export default function WhyChooseUs() {
   return (
-    <section>
+    <section data-aos="fade-up">
       <div className="container py-[100px]">
         <h1 className="text-[32px] sm:text-[38px] lg:text-[44px] xl:text-[50px] font-semibold sm:leading-[72px] font-outfit text-foreground mb-3 text-center">
           Why Choose Us?
