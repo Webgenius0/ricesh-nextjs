@@ -56,7 +56,10 @@ export default function Navbar() {
   }, [prevScrollPos, visible]);
 
   return (
-    <nav className={`w-full h-[150px] bg-yellow-50`}>
+    <nav
+      className={`w-full`}
+      style={{ height: `${148 - prevScrollPos * 0.2}px` }}
+    >
       <div
         className={cn("bg-dark fixed w-full z-30 transition-top duration-300", {
           "top-[148px]": visible,

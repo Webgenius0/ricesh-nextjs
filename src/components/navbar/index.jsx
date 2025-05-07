@@ -1,62 +1,62 @@
-'use client';
-import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
+"use client";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const links = [
   {
-    path: '/',
-    label: 'Home',
+    path: "/",
+    label: "Home",
   },
   {
-    path: '/education',
-    label: 'Continuing Education',
+    path: "/education",
+    label: "Continuing Education",
   },
   {
-    path: '/career',
-    label: 'Career Center',
+    path: "/career",
+    label: "Career Center",
   },
   {
-    path: '/about',
-    label: 'About',
+    path: "/about",
+    label: "About",
   },
   {
-    path: '/blog',
-    label: 'Blog',
+    path: "/blog",
+    label: "Blog",
   },
 ];
 
-const transparentRoutes = ['/'];
+const transparentRoutes = ["/"];
 
 export default function Navbar() {
   const pathname = usePathname();
-  const [bgColor, setBgColor] = useState('transparent');
+  const [bgColor, setBgColor] = useState("transparent");
   const [visible, setVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
 
   useEffect(() => {
     if (!transparentRoutes.includes(pathname)) {
-      setBgColor('white');
+      setBgColor("white");
     } else {
-      setBgColor('transparent');
+      setBgColor("transparent");
     }
 
     const changeBackground = () => {
       if (!transparentRoutes.includes(pathname)) {
-        setBgColor('white');
+        setBgColor("white");
       } else if (window.scrollY >= window.innerHeight * 0.8 - 88) {
-        setBgColor('white');
+        setBgColor("white");
       } else if (window.scrollY >= 100) {
-        setBgColor('semi-transparent');
+        setBgColor("semi-transparent");
       } else {
-        setBgColor('transparent');
+        setBgColor("transparent");
       }
     };
 
-    window.addEventListener('scroll', changeBackground);
-    return () => window.removeEventListener('scroll', changeBackground);
+    window.addEventListener("scroll", changeBackground);
+    return () => window.removeEventListener("scroll", changeBackground);
   }, [pathname]);
 
   useEffect(() => {
@@ -66,22 +66,23 @@ export default function Navbar() {
       setPrevScrollPos(currentScrollPos);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [prevScrollPos, visible]);
 
   return (
     <nav
       className={cn(
-        'transition-top duration-300 sticky mt-[60px] top-0 z-20 bg-transparent h-[88px] flex items-center',
+        "transition-top duration-300 sticky mt-[60px] top-0 z-20 bg-transparent h-[88px] flex items-center",
         {
-          'top-[60px]': visible,
-          'top-0': !visible,
-          'bg-background': bgColor === 'white',
-          'backdrop-blur-sm': bgColor === 'semi-transparent',
+          "top-[60px]": visible,
+          "top-0": !visible && !pathname.includes("/dashboard"),
+          "-top-[148px]": !visible && pathname.includes("/dashboard"),
+          "bg-background": bgColor === "white",
+          "backdrop-blur-sm": bgColor === "semi-transparent",
         }
       )}
     >
@@ -91,10 +92,10 @@ export default function Navbar() {
           <Link href="/">
             <h2
               className={cn(
-                'font-semibold text-[26px] leading-[100%] tracking-[0%] text-foreground',
+                "font-semibold text-[26px] leading-[100%] tracking-[0%] text-foreground",
                 {
-                  'text-background':
-                    bgColor === 'semi-transparent' || bgColor === 'transparent',
+                  "text-background":
+                    bgColor === "semi-transparent" || bgColor === "transparent",
                 }
               )}
             >
@@ -106,10 +107,10 @@ export default function Navbar() {
               <Link
                 href={item.path}
                 key={item.path}
-                className={cn('font-normal text-base leading-6 tracking-[0%]', {
-                  'text-dark-foreground':
-                    bgColor === 'transparent' || bgColor === 'semi-transparent',
-                  'text-primary underline underline-offset-4':
+                className={cn("font-normal text-base leading-6 tracking-[0%]", {
+                  "text-dark-foreground":
+                    bgColor === "transparent" || bgColor === "semi-transparent",
+                  "text-primary underline underline-offset-4":
                     pathname === item.path,
                 })}
               >
@@ -119,7 +120,7 @@ export default function Navbar() {
           </div>
         </div>
         <Button
-          variant={bgColor === 'white' ? 'default' : 'secondary'}
+          variant={bgColor === "white" ? "default" : "secondary"}
           size="sm"
         >
           Join now
