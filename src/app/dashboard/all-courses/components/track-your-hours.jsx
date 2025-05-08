@@ -8,7 +8,7 @@ const selectOption = [
 ];
 export default function TrackYourHours() {
   return (
-    <section>
+    <section data-aos="fade-up">
       <div className="container mt-8">
         <div className="mb-[30px]">
           <h2 className="text-3xl font-semibold leading-[44px] font-outfit text-foreground">

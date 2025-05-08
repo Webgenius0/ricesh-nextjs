@@ -18,7 +18,7 @@ const selectOption = [
 import React from "react";
 export default function CareerGoalsSelector() {
   return (
-    <section>
+    <section data-aos="fade-up">
       <div className="container mt-8 w-full">
         <div>
           <h4 className="font-outfit text-base font-medium text-foreground">

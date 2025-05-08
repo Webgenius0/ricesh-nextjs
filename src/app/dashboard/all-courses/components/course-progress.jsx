@@ -3,7 +3,7 @@ import React from "react";
 
 export default function CourseProgress() {
   return (
-    <section>
+    <section data-aos="fade-up">
       <div className="container">
         <div className="grid grid-cols-4 gap-6 py-10">
           <CountUpComponent

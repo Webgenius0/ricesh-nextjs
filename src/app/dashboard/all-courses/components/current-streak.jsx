@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function CurrentStreak() {
   return (
-    <section>
+    <section data-aos="fade-up">
       <div className="container">
         <div className="bg-white rounded-2xl p-6 flex gap-20 mt-10 mb-8">
           <div className="flex-1 flex flex-col justify-between">
