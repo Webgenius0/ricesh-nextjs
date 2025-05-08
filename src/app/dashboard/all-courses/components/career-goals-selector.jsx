@@ -19,9 +19,11 @@ import React from "react";
 export default function CareerGoalsSelector() {
   return (
     <section>
-      <div className="container mt-8">
+      <div className="container mt-8 w-full">
         <div>
-          <h4 className="font-outfit text-base font-medium text-foreground">Identify 3 career goals</h4>
+          <h4 className="font-outfit text-base font-medium text-foreground">
+            Identify 3 career goals
+          </h4>
         </div>
         <div className="grid grid-cols-3 gap-6 mt-3">
           <SelectCareerGoals
