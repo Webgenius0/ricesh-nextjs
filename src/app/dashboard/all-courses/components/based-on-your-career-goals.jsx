@@ -35,7 +35,7 @@ const cardInformation = [
 export default function BasedOnYourCareerGoals() {
   return (
     <section data-aos="fade-up">
-      <div className="container space-y-10 mt-10">
+      <div className="container space-y-10 mt-10 mb-[120px]">
         <div className="flex flex-col gap-2">
           <GlobalText variant={"foreground"}>
             Based on your career goals.

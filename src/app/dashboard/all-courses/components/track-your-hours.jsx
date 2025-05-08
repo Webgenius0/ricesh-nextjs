@@ -44,9 +44,9 @@ function ChooseOption({ selectOption, placeholder, title = "No title" }) {
         <PlusIcon />
       </div>
       <div>
-        <p className="text-base font-outfit font-medium text-foreground mb-3">
+        <h4 className="text-base font-outfit font-medium text-foreground mb-3">
           {title}
-        </p>
+        </h4>
         <SelectOptionField
           selectOption={selectOption}
           placeholder={placeholder}
