@@ -42,7 +42,6 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
-      console.log("currentScrollPos", currentScrollPos);
 
       setVisible(0 >= currentScrollPos);
       setPrevScrollPos(currentScrollPos);
