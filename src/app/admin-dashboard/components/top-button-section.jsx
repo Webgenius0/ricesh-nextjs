@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 export default function TopButtonSection() {
   return (
-    <section>
+    <section data-aos="fade-up">
       <div className="container mt-[26px] mb-8">
         <div className="flex items-center justify-between">
           <h1 className="text-[32px] font-semibold font-outfit text-foreground">Dashboard</h1>

@@ -37,7 +37,7 @@ const CardInfo = [
 
 export default function Overview() {
   return (
-    <section>
+    <section data-aos="fade-up">
       <div className="container mb-6">
         <Card className="px-6 py-5 gap-0">
           <h5 className="font-semibold text-xl font-outfit">Overview</h5>

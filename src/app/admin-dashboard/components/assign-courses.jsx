@@ -71,7 +71,7 @@ export default function AssignCourses() {
     );
   };
   return (
-    <section>
+    <section data-aos="fade-up">
       <div className="container mb-[120px]">
         <Card className="gap-0 p-6">
           <div className="grid grid-cols-5 gap-3">
