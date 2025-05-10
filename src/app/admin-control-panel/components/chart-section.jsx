@@ -1,9 +1,24 @@
 "use client";
 import React from "react";
 
-import { Bar, BarChart, CartesianGrid, XAxis, YAxis } from "recharts";
+import {
+  Bar,
+  BarChart,
+  CartesianGrid,
+  Label,
+  Pie,
+  PieChart,
+  XAxis,
+  YAxis,
+} from "recharts";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import {
   ChartContainer,
   ChartTooltip,
@@ -36,11 +51,11 @@ export default function ChartSection() {
     <section>
       <div className="container my-6">
         <div className="flex items-center gap-6">
-          <div className="flex-1"  data-aos="fade-up">
+          <div className="flex-1" data-aos="fade-up">
             <CourseAndSurveyManagementChart />
           </div>
-          <div className="w-1/3"  data-aos="fade-up">
-            <CourseAndSurveyManagementChart />
+          <div className="w-1/3" data-aos="fade-up">
+            <DonutChart />
           </div>
         </div>
       </div>
@@ -110,6 +125,118 @@ function CourseAndSurveyManagementChart() {
             <Bar dataKey="recruiters" fill="#4CA64C" radius={0} barSize={32} />
           </BarChart>
         </ChartContainer>
+      </CardContent>
+    </Card>
+  );
+}
+
+const DonutChartData = [
+  { browser: "Completed", visitors: 275, fill: "#3041FF" },
+  { browser: "In Progress", visitors: 200, fill: "#FFA628" },
+  { browser: "Pending", visitors: 287, fill: "#2ABB66" },
+];
+
+const DonutChartConfig = {
+  visitors: {
+    label: "Visitors",
+  },
+  chrome: {
+    label: "Chrome",
+    color: "hsl(var(--chart-1))",
+  },
+  safari: {
+    label: "Safari",
+    color: "hsl(var(--chart-2))",
+  },
+  firefox: {
+    label: "Firefox",
+    color: "hsl(var(--chart-3))",
+  },
+  edge: {
+    label: "Edge",
+    color: "hsl(var(--chart-4))",
+  },
+  other: {
+    label: "Other",
+    color: "hsl(var(--chart-5))",
+  },
+};
+
+export function DonutChart() {
+  const totalVisitors = React.useMemo(() => {
+    return DonutChartData.reduce((acc, curr) => acc + curr.visitors, 0);
+  }, []);
+
+  return (
+    <Card className="flex flex-col">
+      <CardHeader className="items-center pb-0">
+        <CardTitle>Pie Chart - Donut with Text</CardTitle>
+      </CardHeader>
+      <CardContent className="flex-1 pb-0">
+        <ChartContainer
+          config={DonutChartConfig}
+          className="mx-auto aspect-square"
+          style={{ height: "300px", maxHeight: "300px" }}
+        >
+          <PieChart>
+            <ChartTooltip
+              cursor={false}
+              content={<ChartTooltipContent hideLabel />}
+            />
+            <Pie
+              data={DonutChartData}
+              dataKey="visitors"
+              nameKey="browser"
+              innerRadius={60}
+              strokeWidth={5}
+            >
+              <Label
+                content={({ viewBox }) => {
+                  if (viewBox && "cx" in viewBox && "cy" in viewBox) {
+                    return (
+                      <text
+                        x={viewBox.cx}
+                        y={viewBox.cy}
+                        textAnchor="middle"
+                        dominantBaseline="middle"
+                      >
+                        <tspan
+                          x={viewBox.cx}
+                          y={viewBox.cy}
+                          className="fill-foreground text-3xl font-bold"
+                        >
+                          {totalVisitors.toLocaleString()}K
+                        </tspan>
+                        <tspan
+                          x={viewBox.cx}
+                          y={(viewBox.cy || 0) + 24}
+                          className="fill-muted-foreground"
+                        >
+                          Total Count
+                        </tspan>
+                      </text>
+                    );
+                  }
+                }}
+              />
+            </Pie>
+          </PieChart>
+        </ChartContainer>
+        <CardFooter className="flex-col gap-2 text-sm">
+          <div className="flex flex-wrap gap-4">
+            {DonutChartData?.map((data, idx) => (
+              <div key={idx}>
+                <div className="flex items-center gap-2">
+                  <div
+                    className="w-3 h-3"
+                    style={{ background: data.fill }}
+                  ></div>
+                  <span className="text-sm font-poppins">{data.browser}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </CardFooter>
       </CardContent>
     </Card>
   );
