@@ -151,7 +151,7 @@ const tableData = [
 export default function TeamMembersTable() {
   return (
     <section>
-      <div className="container">
+      <div className="container mb-6">
         <Card className="gap-0 p-6">
           <div className="flex items-center gap-3">
             <div className="w-1/3">

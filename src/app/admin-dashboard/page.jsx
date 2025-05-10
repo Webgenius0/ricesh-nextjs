@@ -1,3 +1,4 @@
+import AssignCourses from "./components/assign-courses";
 import Overview from "./components/overview";
 import TeamMembersTable from "./components/team-members-table";
 import TopButtonSection from "./components/top-button-section";
@@ -8,6 +9,7 @@ export default function page() {
       <TopButtonSection />
       <Overview />
       <TeamMembersTable />
+      <AssignCourses />
     </div>
   );
 }
