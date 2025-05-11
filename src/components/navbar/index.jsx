@@ -28,7 +28,7 @@ const links = [
   },
 ];
 
-const transparentRoutes = ["/"];
+const transparentRoutes = ["/", "/continuing-education"];
 
 export default function Navbar() {
   const pathname = usePathname();
