@@ -29,7 +29,7 @@ const discoverCardInfo = [
 
 export default function DiscoverHowLearning() {
   return (
-    <section className="bg-dark-foreground/5">
+    <section className="bg-dark-foreground/5" data-aos="fade-up">
       <div className="container py-[120px]">
         <div>
           <h2 className="text-3xl font-semibold font-outfit text-foreground">
