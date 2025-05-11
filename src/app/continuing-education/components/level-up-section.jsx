@@ -83,7 +83,7 @@ const levelUpCourseData = [
 
 export default function LevelUpSection() {
   return (
-    <section>
+    <section data-aos="fade-up">
       <div className="container py-[100px]">
         <div>
           <h1 className="text-3xl font-outfit font-semibold text-foreground">
@@ -162,10 +162,14 @@ function LevelUpCard({ data }) {
           size={"sm"}
           className={cn(
             "w-full border-[1.5px] hover:bg-transparent",
-            data?.color === "#000080" && "hover:text-[#000080] hover:border-[#000080] bg-[#000080]",
-            data?.color === "#FF4D4D" && "hover:text-[#FF4D4D] hover:border-[#FF4D4D] bg-[#FF4D4D]",
-            data?.color === "#00C2C7" && "hover:text-[#00C2C7] hover:border-[#00C2C7] bg-[#00C2C7]",
-            data?.color === "#FC624A" && "hover:text-[#FC624A] hover:border-[#FC624A] bg-[#FC624A]"
+            data?.color === "#000080" &&
+              "hover:text-[#000080] hover:border-[#000080] bg-[#000080]",
+            data?.color === "#FF4D4D" &&
+              "hover:text-[#FF4D4D] hover:border-[#FF4D4D] bg-[#FF4D4D]",
+            data?.color === "#00C2C7" &&
+              "hover:text-[#00C2C7] hover:border-[#00C2C7] bg-[#00C2C7]",
+            data?.color === "#FC624A" &&
+              "hover:text-[#FC624A] hover:border-[#FC624A] bg-[#FC624A]"
           )}
         >
           {data?.button_text}
