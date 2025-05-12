@@ -1,5 +1,4 @@
 import Banner from "@/components/banner";
-import Brands from "./components/brands";
 import GetInTouch from "../../components/shared/get-in-touch";
 import OurMission from "./components/our-mission";
 import WhyWeAreTheBest from "./components/why-we-are-the-best";
@@ -10,6 +9,7 @@ import WhatDrivesUs from "../../components/shared/what-drives-us";
 import WeWontSettle from "./components/we-wont-settle";
 import WorkingWithUs from "./components/working-with-us";
 import Testimonials from "./components/testimonials";
+import Brands from "@/components/brands/brands";
 
 export default function Home() {
   return (
@@ -27,9 +27,9 @@ export default function Home() {
         buttonText="Discover more"
       />
       <WeWontSettle />
-      <WorkingWithUs />
-      <Testimonials />
-      <GetInTouch />
+      {/* <WorkingWithUs /> */}
+      {/* <Testimonials /> */}
+      {/* <GetInTouch /> */}
       {/* <Components /> */}
     </>
   );

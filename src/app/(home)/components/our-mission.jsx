@@ -12,10 +12,10 @@ export default function OurMission() {
   };
   return (
     <section data-aos="fade-up">
-      <div className="container grid grid-cols-2 gap-20 py-[100px]">
+      <div className="container grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-20 py-[48px] md:py-[100px] px-5 md:px-8">
         <div className="flex flex-col gap-5">
           <div>
-            <h1 className="text-[32px] sm:text-[38px] lg:text-[44px] xl:text-[50px] font-semibold sm:leading-[72px] font-outfit text-foreground mb-3">
+            <h1 className="text-[24px] sm:text-[38px] lg:text-[44px] xl:text-[50px] font-semibold leading-normal sm:leading-[72px] font-outfit text-foreground mb-3">
               Our mission is to improve working conditions for SLPs and AUDs
             </h1>
             <p className="text-sm sm:text-base leading-[24px] text-muted-foreground mb-4">
@@ -32,12 +32,16 @@ export default function OurMission() {
               adipisci minima.
             </p>
           </div>
-          <Button className="w-fit" variant={"default"} size="sm">
+          <Button
+            className="w-fit font-normal md:font-medium"
+            variant={"default"}
+            size="sm"
+          >
             Register now
           </Button>
         </div>
         <div className="flex-1 flex justify-end">
-          <div className="relative w-full h-[500px]">
+          <div className="relative w-full h-[380px] md:h-[500px]">
             {!isPlaying && (
               <div className="absolute inset-0 bg-opacity-50 flex items-center justify-center z-10 rounded-2xl">
                 <img
@@ -47,14 +51,15 @@ export default function OurMission() {
                 />
                 <button
                   onClick={handlePlay}
-                  className="z-20 rounded-full shadow-lg text-foreground p-3 bg-[#ffffff56] cursor-pointer"
+                  className="z-20 rounded-full shadow-lg text-foreground p-2 md:p-3 bg-[#ffffff56] cursor-pointer mb-20 md:mb-0"
                 >
                   <div className="bg-primary rounded-full shadow-lg text-foreground">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="80"
-                      height="80"
+                      // width="80"
+                      // height="80"
                       viewBox="0 0 24 24"
+                      className="w-9 md:w-[80px] h-9 md:h-[80px]"
                     >
                       <path
                         fill="currentColor"
@@ -63,8 +68,8 @@ export default function OurMission() {
                     </svg>
                   </div>
                 </button>
-                <div className="absolute bottom-1.5 w-full px-10 space-y-1.5">
-                  <div className="flex items-center bg-[#1A1E2E99] rounded-full p-2 gap-2 cursor-pointer">
+                <div className="absolute bottom-6 md:bottom-1.5 w-full px-[30px] md:px-10 space-y-1.5">
+                  <div className="flex items-center bg-[#1A1E2E99] rounded-full p-1.5 md:p-2 gap-2 cursor-pointer">
                     <div className="bg-primary rounded-full shadow-lg text-foreground w-fit">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -78,12 +83,12 @@ export default function OurMission() {
                         />
                       </svg>
                     </div>
-                    <p className="text-sm sm:text-base leading-[24px] text-dark-foreground">
+                    <p className="text-xs sm:text-base leading-[24px] text-dark-foreground line-clamp-1">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                       Beatae, incidunt.
                     </p>
                   </div>
-                  <div className="flex items-center bg-[#1A1E2E99] rounded-full p-2 gap-2 cursor-pointer">
+                  <div className="flex items-center bg-[#1A1E2E99] rounded-full p-1.5 md:p-2 gap-2 cursor-pointer">
                     <div className="bg-primary rounded-full shadow-lg text-foreground w-fit">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -97,12 +102,12 @@ export default function OurMission() {
                         />
                       </svg>
                     </div>
-                    <p className="text-sm sm:text-base leading-[24px] text-dark-foreground">
+                    <p className="text-xs sm:text-base leading-[24px] text-dark-foreground line-clamp-1">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                       Beatae, incidunt.
                     </p>
                   </div>
-                  <div className="flex items-center bg-[#1A1E2E99] rounded-full p-2 gap-2 cursor-pointer">
+                  <div className="flex items-center bg-[#1A1E2E99] rounded-full p-1.5 md:p-2 gap-2 cursor-pointer">
                     <div className="bg-primary rounded-full shadow-lg text-foreground w-fit">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -116,12 +121,12 @@ export default function OurMission() {
                         />
                       </svg>
                     </div>
-                    <p className="text-sm sm:text-base leading-[24px] text-dark-foreground">
+                    <p className="text-xs sm:text-base leading-[24px] text-dark-foreground line-clamp-1">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                       Beatae, incidunt.
                     </p>
                   </div>
-                  <div className="flex items-center bg-[#1A1E2E99] rounded-full p-2 gap-2 cursor-pointer">
+                  <div className="flex items-center bg-[#1A1E2E99] rounded-full p-1.5 md:p-2 gap-2 cursor-pointer">
                     <div className="bg-primary rounded-full shadow-lg text-foreground w-fit">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -135,7 +140,7 @@ export default function OurMission() {
                         />
                       </svg>
                     </div>
-                    <p className="text-sm sm:text-base leading-[24px] text-dark-foreground">
+                    <p className="text-xs sm:text-base leading-[24px] text-dark-foreground line-clamp-1">
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                       Beatae, incidunt.
                     </p>

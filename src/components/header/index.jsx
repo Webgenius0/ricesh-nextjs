@@ -53,30 +53,30 @@ export default function Header() {
   return (
     <header
       className={cn(
-        "transition-top duration-300 fixed top-0 z-30 h-[60px] w-full bg-dark text-dark-foreground flex items-center font-poppins",
+        "transition-top duration-300 fixed top-0 z-30 h-[40px] md:h-[60px] w-full bg-dark text-dark-foreground flex items-center font-poppins",
         {
           "top-0": visible,
           "top-[-64px]": !visible,
         }
       )}
     >
-      <div className="container flex justify-between items-center">
-        <div className="flex gap-[22px]">
+      <div className="container flex justify-between items-center px-5 md:px-8">
+        <div className="flex gap-4 md:gap-[22px]">
           {links.map((item) => (
             <Link
               href={item.path}
               key={item.path}
-              className="font-normal text-sm leading-[100%] tracking-[0%]"
+              className="font-normal text-xs md:text-sm leading-[100%] tracking-[0%]"
             >
               {item.label}
             </Link>
           ))}
         </div>
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-4 md:gap-6">
           {info.map((item) => (
             <div key={item.text} className="flex items-center gap-2">
               <item.icon className="size-5" />
-              <span className="font-normal text-sm leading-[100%] tracking-[0%]">
+              <span className="font-normal text-sm leading-[100%] tracking-[0%] hidden md:inline-block">
                 {item.text}
               </span>
             </div>
