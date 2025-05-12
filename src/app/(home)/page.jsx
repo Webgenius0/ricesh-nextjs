@@ -18,7 +18,7 @@ export default function Home() {
       <Brands />
       <WhyWeAreTheBest />
       <OurMission />
-      {/* <OurSpecialization />
+      <OurSpecialization />
       <WhyChooseUs />
       <WhatDrivesUs
         backgroundImage="/images/banner.jpg"
@@ -27,9 +27,9 @@ export default function Home() {
         buttonText="Discover more"
       />
       <WeWontSettle />
-      <WorkingWithUs />
-      <Testimonials />
-      <GetInTouch /> */}
+      {/* <WorkingWithUs /> */}
+      {/* <Testimonials /> */}
+      {/* <GetInTouch /> */}
       {/* <Components /> */}
     </>
   );

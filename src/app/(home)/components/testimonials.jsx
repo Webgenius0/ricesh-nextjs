@@ -105,10 +105,10 @@ export default function Testimonials() {
 function Header() {
   return (
     <div className="text-center mb-10">
-      <h1 className="font-outfit font-semibold text-[50px] leading-[72px] tracking-[0%] text-foreground mb-5">
+      <h1 className="font-outfit font-semibold text-2xl md:text-[50px] lg:leading-[72px] tracking-[0%] text-foreground mb-5">
         Our Experience is Your Advantage
       </h1>
-      <p className="text-base leading-[24px] text-muted-foreground font-light">
+      <p className="text-sm md:text-base leading-[24px] text-muted-foreground font-light">
         Lorem ipsum is simply dummy text of the printing and typesetting
         industry
       </p>
@@ -129,7 +129,7 @@ function TestimonialCard({ index, cardInfo }) {
     >
       <Card
         className={cn(
-          "justify-center px-4 py-9 transition-all duration-300 min-h-[500px]",
+          "justify-center px-4 py-9 transition-all duration-300 md:min-h-[500px]",
           isActive
             ? "scale-125 bg-foreground text-white"
             : "scale-75 bg-muted opacity-70"

@@ -12,7 +12,7 @@ export default function OurMission() {
   };
   return (
     <section data-aos="fade-up">
-      <div className="container grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-20 py-[100px] px-5 md:px-8">
+      <div className="container grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-20 py-[48px] md:py-[100px] px-5 md:px-8">
         <div className="flex flex-col gap-5">
           <div>
             <h1 className="text-[24px] sm:text-[38px] lg:text-[44px] xl:text-[50px] font-semibold leading-normal sm:leading-[72px] font-outfit text-foreground mb-3">

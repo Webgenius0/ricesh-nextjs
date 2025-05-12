@@ -33,27 +33,27 @@ const withOutUs = [
 export default function WhyChooseUs() {
   return (
     <section data-aos="fade-up">
-      <div className="container py-[100px]">
-        <h1 className="text-[32px] sm:text-[38px] lg:text-[44px] xl:text-[50px] font-semibold sm:leading-[72px] font-outfit text-foreground mb-3 text-center">
+      <div className="container py-[24px] md:py-[100px]  px-5 md:px-8">
+        <h1 className="text-2xl md:text-[32px] sm:text-[38px] lg:text-[44px] xl:text-[50px] font-semibold sm:leading-[72px] font-outfit text-foreground mb-3 text-center">
           Why Choose Us?
         </h1>
-        <div className="grid grid-cols-2 gap-6 mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 md:mt-10">
           <div>
             <div>
-              <h1 className="text-[40px] font-semibold sm:leading-[72px] font-outfit text-foreground mb-6 text-center">
+              <h1 className="text-base md:text-[40px] font-semibold sm:leading-[72px] font-outfit text-foreground mb-6 text-center">
                 With Us
               </h1>
             </div>
             <div className="space-y-6">
               {withUs?.map((info, idx) => (
                 <Card
-                  className="p-6 rounded-lg flex-row items-center gap-3"
+                  className="p-5 md:p-6 rounded-lg flex-row items-center gap-3"
                   key={idx}
                 >
-                  <div className=" bg-primary/10 rounded-full w-fit p-5">
-                    <div className="w-10 text-primary">{info?.icon}</div>
+                  <div className=" bg-primary/10 rounded-full w-fit p-3.5 md:p-5">
+                    <div className="w-[30px] md:w-10 text-primary">{info?.icon}</div>
                   </div>
-                  <p className="text-xl font-bold text-muted-foreground leading-relaxed">
+                  <p className="text-base md:text-xl font-bold text-muted-foreground leading-relaxed">
                     {info?.text}
                   </p>
                 </Card>
@@ -62,22 +62,22 @@ export default function WhyChooseUs() {
           </div>
           <div>
             <div>
-              <h1 className="text-[40px] font-semibold sm:leading-[72px] font-outfit text-foreground mb-6 text-center">
+              <h1 className="text-base md:text-[40px] font-semibold sm:leading-[72px] font-outfit text-foreground mb-6 text-center">
                 Without Us
               </h1>
             </div>
             <div className="space-y-6">
               {withOutUs?.map((info, idx) => (
                 <Card
-                  className="p-6 rounded-lg flex-row items-center gap-3"
+                  className="p-5 md:p-6 rounded-lg flex-row items-center gap-3"
                   key={idx}
                 >
-                  <div className=" bg-secondary/10 rounded-full w-fit p-5">
-                    <div className="w-10 text-dark-foreground">
+                  <div className=" bg-[#B1B1B1]/10 rounded-full w-fit p-3.5 md:p-5">
+                    <div className="w-[30px] md:w-10 text-[#B1B1B1]">
                       {info?.icon}
                     </div>
                   </div>
-                  <p className="text-xl font-bold text-muted-foreground leading-relaxed">
+                  <p className="text-base md:text-xl font-bold text-muted-foreground leading-relaxed">
                     {info?.text}
                   </p>
                 </Card>

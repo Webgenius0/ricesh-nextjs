@@ -27,10 +27,10 @@ const weSpecializeIn = [
 export default function OurSpecialization() {
   return (
     <section data-aos="fade-up">
-      <div className="container py-[100px]">
-        <div className="flex justify-between items-end">
-          <div className="w-1/2">
-            <h1 className="text-[32px] sm:text-[38px] lg:text-[44px] xl:text-[50px] font-semibold sm:leading-[72px] font-outfit text-foreground mb-3">
+      <div className="container py-[24px] md:py-[100px] px-5 md:px-8">
+        <div className="flex justify-between items-center md:items-end">
+          <div className="md:w-1/2">
+            <h1 className="text-[24px] sm:text-[38px] lg:text-[44px] xl:text-[50px] font-semibold sm:leading-[72px] font-outfit text-foreground mb-3">
               Take a Peek and See What We Specialize in!
             </h1>
           </div>
@@ -40,14 +40,14 @@ export default function OurSpecialization() {
             </Button>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-6 mt-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 md:mt-14">
           {weSpecializeIn?.map((data, idx) => (
             <Card className="gap-0 p-6 rounded-4xl" key={idx}>
-              <div className="text-primary w-16">{data?.icon}</div>
-              <h1 className="text-2xl font-semibold font-outfit text-foreground mt-5 mb-6">
+              <div className="text-primary w-8 md:w-16">{data?.icon}</div>
+              <h1 className="text-base md:text-2xl font-semibold font-outfit text-foreground my-4 md:mt-5 mb-6">
                 {data?.title}
               </h1>
-              <p className="text-base text-muted-foreground leading-relaxed mb-6">
+              <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6">
                 {data?.description}
               </p>
               <Link
