@@ -17,7 +17,7 @@ export default function Home() {
       <Banner />
       <Brands />
       <WhyWeAreTheBest />
-      <OurMission />
+      {/* <OurMission />
       <OurSpecialization />
       <WhyChooseUs />
       <WhatDrivesUs
@@ -29,7 +29,7 @@ export default function Home() {
       <WeWontSettle />
       <WorkingWithUs />
       <Testimonials />
-      <GetInTouch />
+      <GetInTouch /> */}
       {/* <Components /> */}
     </>
   );

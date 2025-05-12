@@ -76,9 +76,9 @@ export default function Navbar() {
   return (
     <nav
       className={cn(
-        "transition-top duration-300 sticky mt-[60px] top-0 z-20 bg-transparent h-[88px] flex items-center",
+        "transition-top duration-300 sticky mt-10 md:mt-[60px] top-0 z-20 bg-transparent h-[60px] md:h-[88px] flex items-center",
         {
-          "top-[60px]": visible,
+          "top-10 md:top-[60px]": visible,
           "top-0": !visible && !pathname.includes("/dashboard"),
           "-top-[148px]": !visible && pathname.includes("/dashboard"),
           "bg-background": bgColor === "white",
@@ -86,13 +86,39 @@ export default function Navbar() {
         }
       )}
     >
-      <div className="container flex justify-between items-center">
-        <div className="flex gap-[72px] items-center">
+      <div className="container px-5 md:px-8 flex justify-between items-center">
+        <div className="flex gap-3 md:gap-[72px] items-center">
+          <div className="space-y-1 group w-6 h-6 flex flex-col items-center justify-center overflow-hidden cursor-pointer md:hidden">
+            <div
+              className={cn(
+                "h-0.5 rounded-full w-[20px] bg-white transition-all duration-500 group-hover:rotate-45 group-hover:translate-y-[6px]",
+                {
+                  "bg-foreground": bgColor === "white",
+                }
+              )}
+            ></div>
+            <div
+              className={cn(
+                "h-0.5 rounded-full w-[20px] bg-white transition-all duration-300 group-hover:w-0 group-hover:opacity-0",
+                {
+                  "bg-foreground": bgColor === "white",
+                }
+              )}
+            ></div>
+            <div
+              className={cn(
+                "h-0.5 rounded-full w-[20px] bg-white transition-all duration-500 group-hover:-rotate-45 group-hover:-translate-y-[6px]",
+                {
+                  "bg-foreground": bgColor === "white",
+                }
+              )}
+            ></div>
+          </div>
           {/* Logo */}
           <Link href="/">
             <h2
               className={cn(
-                "font-semibold text-[26px] leading-[100%] tracking-[0%] text-foreground",
+                "font-semibold text-xs md:text-[26px] leading-[100%] tracking-[0%] text-foreground",
                 {
                   "text-background":
                     bgColor === "semi-transparent" || bgColor === "transparent",
@@ -102,7 +128,8 @@ export default function Navbar() {
               Speechceu.com
             </h2>
           </Link>
-          <div className="flex gap-5 items-center">
+          {/* Links For Desktop & Large Screens & Tablets */}
+          <div className="hidden md:flex gap-5 items-center">
             {links.map((item) => (
               <Link
                 href={item.path}
@@ -122,6 +149,7 @@ export default function Navbar() {
         <Button
           variant={bgColor === "white" ? "default" : "secondary"}
           size="sm"
+          className="text-xs md:text-base h-8 md:h-auto font-normal md:font-medium"
         >
           Join now
         </Button>
