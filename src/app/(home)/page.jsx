@@ -17,8 +17,8 @@ export default function Home() {
       <Banner />
       <Brands />
       <WhyWeAreTheBest />
-      {/* <OurMission />
-      <OurSpecialization />
+      <OurMission />
+      {/* <OurSpecialization />
       <WhyChooseUs />
       <WhatDrivesUs
         backgroundImage="/images/banner.jpg"

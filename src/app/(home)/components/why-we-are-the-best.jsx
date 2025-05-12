@@ -78,13 +78,13 @@ const stats = [
 export default function WhyWeAreTheBest() {
   return (
     <section data-aos="fade-up">
-      <div className="container flex flex-col gap-10">
+      <div className="container flex flex-col gap-6 md:gap-10 px-5 md:px-8">
         {/* Header */}
-        <div className="w-[90%] sm:max-w-[70%] flex flex-col gap-5">
-          <h1 className="text-[32px] sm:text-[38px] lg:text-[44px] xl:text-[50px] font-semibold sm:leading-[72px] font-outfit text-foreground">
+        <div className="w-[90%] sm:max-w-[70%] flex flex-col gap-3 md:gap-5">
+          <h1 className="text-2xl sm:text-[38px] lg:text-[44px] xl:text-[50px] font-semibold sm:leading-[72px] font-outfit text-foreground">
             Why are we the best?
           </h1>
-          <p className="text-sm sm:text-base leading-[24px] text-muted-foreground">
+          <p className="text-sm sm:text-base leading-[20px] md:leading-[24px] text-muted-foreground">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur
             sed voluptas delectus qui architecto iure quibusdam omnis optio
             aspernatur adipisci.
@@ -96,7 +96,7 @@ export default function WhyWeAreTheBest() {
             {/* Problems */}
             <Card className="w-full h-full gap-0 rounded-[24px]">
               <CardHeader className={`gap-0`}>
-                <CardTitle className="text-xl sm:text-2xl font-semibold font-outfit">
+                <CardTitle className="text-base sm:text-2xl font-semibold font-outfit">
                   Problem
                 </CardTitle>
               </CardHeader>
@@ -116,7 +116,7 @@ export default function WhyWeAreTheBest() {
             {/* Solutions */}
             <Card className="w-full h-full bg-dark gap-0 rounded-[24px]">
               <CardHeader className={`gap-0`}>
-                <CardTitle className="text-xl sm:text-2xl font-semibold font-outfit text-background">
+                <CardTitle className="text-base sm:text-2xl font-semibold font-outfit text-background">
                   Solution
                 </CardTitle>
               </CardHeader>
@@ -135,16 +135,16 @@ export default function WhyWeAreTheBest() {
           </div>
 
           {/* Statitics */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map((detail, idx) => (
-              <Card key={idx} className="px-10 py-5 bg-[#FFFF] rounded-[16px]">
+              <Card key={idx} className="px-3 md:px-10 py-5 bg-[#FFFF] rounded-[16px]">
                 <CardContent
                   className={`flex flex-col items-center gap-2 px-0`}
                 >
-                  <h1 className="text-primary text-[32px] sm:text-[38px] lg:text-[44px] xl:text-[50px] leading-[60px] font-semibold font-outfit">
+                  <h1 className="text-primary text-[24px] sm:text-[38px] lg:text-[44px] xl:text-[50px] leading-normal md:leading-[60px] font-semibold font-outfit">
                     {detail.total}+
                   </h1>
-                  <p className="text-base csm:text-lg lg:text-xl leading-[34px] text-primary text-center">
+                  <p className="text-xs sm:text-lg lg:text-xl leading-normal md:leading-[34px] text-primary text-center">
                     {detail.title}
                   </p>
                 </CardContent>
