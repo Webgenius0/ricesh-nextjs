@@ -4,6 +4,14 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "../ui/sheet";
 
 const links = [
   {
@@ -86,33 +94,10 @@ export default function Navbar() {
         }
       )}
     >
-      <div className="container px-5 md:px-8 flex justify-between items-center">
+      <div className="container px-5 md:px-8 flex justify-between items-center relative">
         <div className="flex gap-3 md:gap-[72px] items-center">
-          <div className="space-y-1 group w-6 h-6 flex flex-col items-center justify-center overflow-hidden cursor-pointer md:hidden">
-            <div
-              className={cn(
-                "h-0.5 rounded-full w-[20px] bg-white transition-all duration-500 group-hover:rotate-45 group-hover:translate-y-[6px]",
-                {
-                  "bg-foreground": bgColor === "white",
-                }
-              )}
-            ></div>
-            <div
-              className={cn(
-                "h-0.5 rounded-full w-[20px] bg-white transition-all duration-300 group-hover:w-0 group-hover:opacity-0",
-                {
-                  "bg-foreground": bgColor === "white",
-                }
-              )}
-            ></div>
-            <div
-              className={cn(
-                "h-0.5 rounded-full w-[20px] bg-white transition-all duration-500 group-hover:-rotate-45 group-hover:-translate-y-[6px]",
-                {
-                  "bg-foreground": bgColor === "white",
-                }
-              )}
-            ></div>
+          <div className="flex md:hidden">
+            <MobileNav bgColor={bgColor} />
           </div>
           {/* Logo */}
           <Link href="/">
@@ -155,5 +140,73 @@ export default function Navbar() {
         </Button>
       </div>
     </nav>
+  );
+}
+
+function MobileNav({ bgColor }) {
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
+
+  return (
+    <Sheet open={mobileNavOpen} onOpenChange={setMobileNavOpen}>
+      <SheetTrigger>
+        <div
+          onClick={() => setMobileNavOpen(!mobileNavOpen)}
+          className="space-y-1 group w-6 h-6 flex flex-col items-center justify-center overflow-hidden cursor-pointer md:hidden"
+        >
+          <div
+            className={cn(
+              "h-0.5 rounded-full w-[20px] bg-white transition-all duration-500",
+              {
+                "bg-foreground": bgColor === "white",
+                "rotate-45 translate-y-[6px]": mobileNavOpen,
+              }
+            )}
+          ></div>
+          <div
+            className={cn(
+              "h-0.5 rounded-full w-[20px] bg-white transition-all duration-300",
+              {
+                "bg-foreground": bgColor === "white",
+                "w-0 opacity-0": mobileNavOpen,
+              }
+            )}
+          ></div>
+          <div
+            className={cn(
+              "h-0.5 rounded-full w-[20px] bg-white transition-all duration-500",
+              {
+                "bg-foreground": bgColor === "white",
+                "-rotate-45 -translate-y-[6px]": mobileNavOpen,
+              }
+            )}
+          ></div>
+        </div>
+      </SheetTrigger>
+
+      <SheetContent className="w-3/4 bg-dark border-none p-6">
+        <SheetHeader className="space-y-6 mt-10">
+          <SheetTitle>
+            <Link href="/">
+              <h2 className="font-semibold text-2xl md:text-[26px] leading-[100%] tracking-[0%] text-white">
+                Speechceu.com
+              </h2>
+            </Link>
+          </SheetTitle>
+
+          {/* Replacing SheetDescription with a custom div */}
+          <div className="space-y-4 text-white mt-4">
+            {links.map((item) => (
+              <Link
+                href={item.path}
+                key={item.path}
+                className="block leading-6 tracking-[0%] text-xl font-thin hover:underline hover:text-primary"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+        </SheetHeader>
+      </SheetContent>
+    </Sheet>
   );
 }

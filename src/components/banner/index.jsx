@@ -18,7 +18,7 @@ export default function Banner() {
           Continuing education on AI, supervision, and burnout
         </h1>
 
-        <ul className="list-disc pl-5 font-normal text-xs md:text-lg leading-6 tracking-[0%] text-dark-foreground space-y-2.5 md:space-y-2.5 mb-4 md:mb-[32px]">
+        <ul className="list-disc pl-5 font-normal text-xs md:text-lg leading-6 tracking-[0%] text-dark-foreground space-y-1 md:space-y-2.5 mb-4 md:mb-[32px]">
           {features.map((feature) => (
             <li key={feature} className="">
               {feature}
