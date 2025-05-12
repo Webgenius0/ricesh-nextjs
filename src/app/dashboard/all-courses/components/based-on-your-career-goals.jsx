@@ -10,25 +10,25 @@ const cardInformation = [
     number: 1,
     title: "Introduction to Supervision in Speech-Language Pathology",
     image: "/images/card_img_1.webp",
-    link: "education/introduction-to-supervision-in-speech-language-pathology",
+    link: "/continuing-education/introduction-to-supervision-in-speech-language-pathology",
   },
   {
     number: 2,
     title: "Core Principles of Effective Supervision",
     image: "/images/card_img_2.jpg",
-    link: "education/core-principles-of-effective-supervision",
+    link: "/continuing-education/core-principles-of-effective-supervision",
   },
   {
     number: 3,
     title: "Roles and Responsibilities of a Supervisor",
     image: "/images/card_img_3.jpg",
-    link: "education/roles-and-responsibilities-of-a-supervisor",
+    link: "/continuing-education/roles-and-responsibilities-of-a-supervisor",
   },
   {
     number: 4,
     title: "Building a Strong Supervisor-Supervisee Relationship",
     image: "/images/card_img_4.jpg",
-    link: "education/building-a-strong-supervisor-supervisee-relationship",
+    link: "/continuing-education/building-a-strong-supervisor-supervisee-relationship",
   },
 ];
 

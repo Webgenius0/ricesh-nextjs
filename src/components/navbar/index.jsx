@@ -19,7 +19,7 @@ const links = [
     label: "Home",
   },
   {
-    path: "/education",
+    path: "/continuing-education",
     label: "Continuing Education",
   },
   {
