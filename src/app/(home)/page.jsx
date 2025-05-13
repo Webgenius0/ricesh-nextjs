@@ -29,7 +29,7 @@ export default function Home() {
       <WeWontSettle />
       {/* <WorkingWithUs /> */}
       {/* <Testimonials /> */}
-      {/* <GetInTouch /> */}
+      <GetInTouch />
       {/* <Components /> */}
     </>
   );

@@ -12,10 +12,10 @@ export default function OurMission() {
   };
   return (
     <section data-aos="fade-up">
-      <div className="container grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-20 py-[48px] md:py-[100px] px-5 md:px-8">
+      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-20 py-[48px] md:py-[100px] px-5 md:px-8">
         <div className="flex flex-col gap-5">
           <div>
-            <h1 className="text-[24px] sm:text-[38px] lg:text-[44px] xl:text-[50px] font-semibold leading-normal sm:leading-[72px] font-outfit text-foreground mb-3">
+            <h1 className="text-[24px] sm:text-[38px] lg:text-[44px] xl:text-[50px] font-semibold leading-normal lg:leading-[72px] font-outfit text-foreground mb-3">
               Our mission is to improve working conditions for SLPs and AUDs
             </h1>
             <p className="text-sm sm:text-base leading-[24px] text-muted-foreground mb-4">
@@ -41,7 +41,7 @@ export default function OurMission() {
           </Button>
         </div>
         <div className="flex-1 flex justify-end">
-          <div className="relative w-full h-[380px] md:h-[500px]">
+          <div className="relative w-full h-[380px] md:h-[500px] overflow-hidden">
             {!isPlaying && (
               <div className="absolute inset-0 bg-opacity-50 flex items-center justify-center z-10 rounded-2xl">
                 <img
@@ -152,7 +152,7 @@ export default function OurMission() {
             <video
               ref={videoRef}
               className="w-full h-full rounded-2xl"
-              src="https://youtu.be/H7W8LSqVtCo"
+              src="/video_1.mp4"
               controls
               style={{ display: isPlaying ? "block" : "none" }}
             />

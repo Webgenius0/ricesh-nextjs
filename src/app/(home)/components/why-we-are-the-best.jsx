@@ -92,7 +92,7 @@ export default function WhyWeAreTheBest() {
         </div>
 
         <div className="flex flex-col gap-6">
-          <div className="grid sm:grid-cols-2 items-center gap-6 lg:gap-6 w-full">
+          <div className="grid lg:grid-cols-2 items-center gap-6 lg:gap-6 w-full">
             {/* Problems */}
             <Card className="w-full h-full gap-0 rounded-[24px]">
               <CardHeader className={`gap-0`}>

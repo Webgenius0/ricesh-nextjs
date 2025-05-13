@@ -23,9 +23,9 @@ export default function Brands() {
       </h2>
 
       <div className="relative w-full overflow-hidden">
-        <div className="hidden md:flex items-center gap-16 animate-marquee whitespace-nowrap will-change-transform">
+        <div className="flex items-center md:gap-16 animate-marquee whitespace-nowrap will-change-transform">
           {[...logos, ...logos].map((src, index) => (
-            <div key={index} className="flex-shrink-0 w-40 md:h-20 relative">
+            <div key={index} className="flex-shrink-0 w-40 h-10 lg:h-20 relative">
               <Image
                 src={src}
                 alt={`Brand logo ${index + 1}`}
@@ -36,7 +36,7 @@ export default function Brands() {
           ))}
         </div>
       </div>
-      <div>
+      {/* <div>
         <div className="flex flex-wrap items-center justify-center gap-[18px] md:hidden">
           {logos?.map((src, idx) => (
             <div key={idx} className="flex-shrink-0 w-[87px] h-5 relative">
@@ -49,7 +49,7 @@ export default function Brands() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
