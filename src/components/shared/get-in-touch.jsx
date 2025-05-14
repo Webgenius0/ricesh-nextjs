@@ -50,7 +50,7 @@ export default function GetInTouch({ theme = "light" }) {
     <section className={`${colors.mainSectionBg}`} data-aos="fade-up">
       <div className="container flex flex-col lg:flex-row items-center gap-6 py-6 lg:py-[100px] px-5 md:px-8">
         <div
-          className={`basis-[50%] w-full md:w-fit flex flex-col gap-6 p-6 rounded-[24px] ${colors.sectionBg}`}
+          className={`lg:basis-[50%] w-full lg:w-fit flex flex-col gap-6 p-6 rounded-[24px] ${colors.sectionBg}`}
         >
           <h1
             className={`text-xl md:text-[36px] leading-[44px] font-outfit font-semibold ${colors.labelText}`}
