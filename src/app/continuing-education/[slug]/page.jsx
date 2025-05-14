@@ -8,8 +8,8 @@ export default function Page() {
   return (
     <div>
       <TopicBanner />
-      <TopicContent />
-      <GetInTouch theme={"dark"} />
+      {/* <TopicContent />
+      <GetInTouch theme={"dark"} /> */}
       {/* <Components /> */}
     </div>
   );

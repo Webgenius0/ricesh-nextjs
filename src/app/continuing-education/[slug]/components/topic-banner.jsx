@@ -6,7 +6,7 @@ export default function TopicBanner() {
     <section className="h-[80svh] bg-center bg-cover bg-no-repeat bg-[url(/images/topic_banner.jpg)] relative">
       <div className="absolute w-full h-full bg-[linear-gradient(90deg,_#000000_0%,_rgba(39,18,33,0.2)_100%)] z-0"></div>
       <div className="container relative flex flex-col justify-center h-full">
-        <h1 className="font-outfit font-semibold text-5xl leading-[38px] tracking-[0%] text-white w-1/2 mb-[12px]">
+        <h1 className="font-outfit font-semibold text-[32px] lg:text-5xl leading-[38px] tracking-[0%] text-white lg:w-1/2 mb-[12px]">
           Stress management for the SLP
         </h1>
         <p className="text-lg text-dark-foreground font-medium">
