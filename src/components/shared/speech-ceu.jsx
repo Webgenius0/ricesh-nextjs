@@ -107,7 +107,7 @@ const speech_ceu = [
 export default function SpeechCeu() {
   return (
     <section data-aos="fade-up">
-      <div className="container py-[100px]">
+      <div className="container py-[100px] px-5 md:px-8">
         <Carousel
           opts={{ align: "center" }}
           className="w-full relative rounded-2xl overflow-hidden"
@@ -168,7 +168,7 @@ export default function SpeechCeu() {
               </div>
             </CarouselItem> */}
           </CarouselContent>
-          <CarouselDots className="absolute bottom-7 left-2" />
+          <CarouselDots className="absolute bottom-7 left-2 lg:right-2 xl:right-auto" />
         </Carousel>
       </div>
     </section>
@@ -200,18 +200,20 @@ function CarouselDots({ className }) {
 
 function ItemCard({ data }) {
   return (
-    <CarouselItem className={cn("w-full md:basis-1/2 lg:basis-full")}>
-      <div className="flex gap-20 h-ful">
+    <CarouselItem className={cn("w-full lg:basis-full")}>
+      <div className="flex flex-col lg:flex-row gap-10 xl:gap-20 h-ful">
         <div className="flex-1 pt-10">
           <h3 className="text-base">SpeechCEU | Empowers | SLPs</h3>
-          <h1 className="text-4xl font-semibold leading-[44px] text-foreground mt-9 mb-12">
+          <h1 className="text-xl lg:text-3xl xl:text-4xl font-semibold lg:leading-[44px] text-foreground mt-4 lg:mt-6 xl:mt-9 mb-5 xl:mb-12">
             {data?.title}
           </h1>
-          <div className="grid grid-cols-2 gap-10 mb-12">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-5 lg:gap-10 mb-12">
             {data?.statistics?.map((progressData, idx) => (
               <div key={idx}>
-                <div className="flex items-end mb-3">
-                  <p className="text-sm font-normal">{progressData?.text}</p>
+                <div className="flex items-end justify-between mb-3">
+                  <p className="text-sm font-normal w-1/2">
+                    {progressData?.text}
+                  </p>
                   <h4 className="text-2xl font-medium text-primary">
                     {progressData?.percentage}%
                   </h4>
@@ -228,8 +230,12 @@ function ItemCard({ data }) {
             </Button>
           </div>
         </div>
-        <div className="rounded-3xl overflow-hidden w-1/2 max-h-[520px]">
-          <img src="/images/speech-ceu.jpg" alt="" className="object-contain" />
+        <div className="rounded-3xl overflow-hidden w-full lg:w-1/2 min-h-[354px] lg:min-h-full xl:max-h-[520px] bg-no-repeat bg-cover bg-center bg-[url(/images/speech-ceu.jpg)] xl:bg-none">
+          <img
+            src="/images/speech-ceu.jpg"
+            alt=""
+            className="object-contain xl:block hidden"
+          />
         </div>
       </div>
     </CarouselItem>

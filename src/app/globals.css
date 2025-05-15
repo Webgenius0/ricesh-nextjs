@@ -151,3 +151,14 @@
   /* max-width: 1170px; */
   max-width: 1560px;
 }
+
+/* Scroll Bar Class start here */
+.scrollbar-hide {
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+/* Scroll Bar Class end here */

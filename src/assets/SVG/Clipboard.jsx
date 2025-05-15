@@ -1,16 +1,40 @@
-import React from "react";
-
-const Clipboard = () => {
+const Clipboard = ({ color = "currentColor" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-    //   width="24"
-    //   height="24"
-      viewBox="0 0 24 24"
+      // width={width}
+      // height={height}
+      viewBox="0 0 72 72"
+      fill="none"
+      stroke={color}
     >
       <path
-        fill="currentColor"
-        d="M11.5 1a2.5 2.5 0 0 1 2.45 2H17a3 3 0 0 1 3 3v13a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h3.05a2.5 2.5 0 0 1 2.45-2m1.41 2a1.495 1.495 0 0 0-2.82 0zM6 4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1v3H7V4zm2 0v2h7V4z"
+        d="M24 36.5996H45"
+        strokeWidth="3"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M24 48.5996H37.14"
+        strokeWidth="3"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M30 18H42C48 18 48 15 48 12C48 6 45 6 42 6H30C27 6 24 6 24 12C24 18 27 18 30 18Z"
+        strokeWidth="3"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M48 12.0605C57.99 12.6005 63 16.2905 63 30.0005V48.0005C63 60.0005 60 66.0005 45 66.0005H27C12 66.0005 9 60.0005 9 48.0005V30.0005C9 16.3205 14.01 12.6005 24 12.0605"
+        strokeWidth="3"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

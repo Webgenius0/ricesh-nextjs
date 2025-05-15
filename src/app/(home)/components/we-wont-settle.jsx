@@ -5,14 +5,14 @@ import { Button } from "@/components/ui/button";
 export default function WeWontSettle() {
   return (
     <section data-aos="fade-up">
-      <div className="container grid grid-cols-1 md:grid-cols-2 gap-10 items-center py-[48] md:py-[100px] px-5 md:px-8">
-        <div className="rounded-2xl overflow-hidden relative h-full">
-          <img
+      <div className="container grid grid-cols-1 lg:grid-cols-2 gap-10 items-center py-[48] lg:py-[100px] px-5 md:px-8">
+        <div className="rounded-2xl overflow-hidden relative bg-no-repeat bg-cover h-[350px] lg:h-full bg-[url(/images/weWontSettleSideImage.png)]">
+          {/* <img
             className="h-[350px] md:h-full object-cover"
             src="/images/weWontSettleSideImage.png"
             alt=""
-          />
-          <div className="absolute bottom-6 right-4 md:right-6 bg-foreground/70 flex items-start gap-3 w-11/12 md:w-2/4 rounded-lg p-3">
+          /> */}
+          <div className="absolute bottom-6 right-4 md:right-6 bg-foreground/70 flex items-start gap-3 w-11/12 lg:w-2/4 rounded-lg p-3">
             <div className="bg-foreground w-fit p-2.5 md:p-4 rounded-lg">
               <DoubleQuotation className="w-5 md:w-8 text-muted" />
             </div>
@@ -28,8 +28,8 @@ export default function WeWontSettle() {
             </div>
           </div>
         </div>
-        <div className="md:py-10">
-          <h1 className="font-outfit font-semibold text-base md:text-6xl md:leading-[72px] tracking-[0%] text-foreground mb-9">
+        <div className="lg:py-10">
+          <h1 className="font-outfit font-semibold text-base md:text-5xl lg:text-6xl md:leading-[72px] tracking-[0%] text-foreground mb-9">
             We won't Settle for anything less than excellence
           </h1>
           <p className="text-sm sm:text-base leading-[24px] text-muted-foreground mb-9">

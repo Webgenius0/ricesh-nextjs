@@ -48,12 +48,12 @@ export default function GetInTouch({ theme = "light" }) {
 
   return (
     <section className={`${colors.mainSectionBg}`} data-aos="fade-up">
-      <div className="container flex items-center gap-6 py-[100px]">
+      <div className="container flex flex-col lg:flex-row items-center gap-6 py-6 lg:py-[100px] px-5 md:px-8">
         <div
-          className={`basis-[50%] flex flex-col gap-6 p-6 rounded-[24px] ${colors.sectionBg}`}
+          className={`lg:basis-[50%] w-full lg:w-fit flex flex-col gap-6 p-6 rounded-[24px] ${colors.sectionBg}`}
         >
           <h1
-            className={`text-[36px] leading-[44px] font-outfit font-semibold ${colors.labelText}`}
+            className={`text-xl md:text-[36px] leading-[44px] font-outfit font-semibold ${colors.labelText}`}
           >
             Let's Get In Touch
           </h1>
@@ -70,7 +70,7 @@ export default function GetInTouch({ theme = "light" }) {
                   render={({ field }) => (
                     <FormItem className="flex-1">
                       <FormLabel
-                        className={`text-lg leading-[26px] font-medium ${colors.labelText}`}
+                        className={`text-sm md:text-lg leading-[26px] font-medium ${colors.labelText}`}
                       >
                         First name
                       </FormLabel>
@@ -93,7 +93,7 @@ export default function GetInTouch({ theme = "light" }) {
                   render={({ field }) => (
                     <FormItem className="flex-1">
                       <FormLabel
-                        className={`text-lg leading-[26px] font-medium ${colors.labelText}`}
+                        className={`text-sm md:text-lg leading-[26px] font-medium ${colors.labelText}`}
                       >
                         Last name
                       </FormLabel>
@@ -117,7 +117,7 @@ export default function GetInTouch({ theme = "light" }) {
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel
-                      className={`text-lg leading-[26px] font-medium ${colors.labelText}`}
+                      className={`text-sm md:text-lg leading-[26px] font-medium ${colors.labelText}`}
                     >
                       Email
                     </FormLabel>
@@ -140,7 +140,7 @@ export default function GetInTouch({ theme = "light" }) {
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel
-                      className={`text-lg leading-[26px] font-medium ${colors.labelText}`}
+                      className={`text-sm md:text-lg leading-[26px] font-medium ${colors.labelText}`}
                     >
                       Message
                     </FormLabel>
@@ -158,7 +158,7 @@ export default function GetInTouch({ theme = "light" }) {
               <Button
                 type="submit"
                 disabled={isPending}
-                className={`py-5 px-6 rounded-[60px] cursor-pointer flex text-base font-medium mt-1 w-fit ${colors.buttonText}`}
+                className={`md:py-5 px-6 rounded-[60px] cursor-pointer flex text-base font-medium mt-1 w-fit ${colors.buttonText}`}
               >
                 {isPending ? "Submitting" : "Submit"}
               </Button>
@@ -168,40 +168,46 @@ export default function GetInTouch({ theme = "light" }) {
 
         <div className="basis-[50%] flex flex-col gap-5">
           <h1
-            className={`text-[50px] leading-[66px] font-semibold font-outfit ${colors.labelText}`}
+            className={`text-base md:text-[40px] lg:text-[50px] lg:leading-[66px] font-semibold font-outfit ${colors.labelText}`}
           >
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui
             deserunt ut nemo.
           </h1>
-          <p className={`text-base leading-[24px] ${colors.paragraphText}`}>
+          <p
+            className={`text-sm md:text-base lg:leading-[24px] ${colors.paragraphText}`}
+          >
             Lorem ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s.
           </p>
-          <div className="flex items-center gap-6 mb-9">
-            {[1, 2].map((_, i) => (
-              <div key={i} className="flex items-center gap-2.5">
-                <div className={`rounded-full w-fit p-2 ${colors.highlightBg}`}>
-                  <div className={`w-5 ${colors.highlightText}`}>
-                    <Clipboard />
+          <div className="flex md:flex-col flex-row items-center md:items-start justify-between">
+            <div className="flex flex-col gap-3 md:gap-6 md:mb-9">
+              {[1, 2].map((_, i) => (
+                <div key={i} className="flex items-center gap-2.5">
+                  <div
+                    className={`rounded-full w-fit p-2 ${colors.highlightBg}`}
+                  >
+                    <div className={`w-5 ${colors.highlightText}`}>
+                      <Clipboard />
+                    </div>
                   </div>
+                  <p
+                    className={`text-base md:text-xl font-medium md:leading-[24px] ${colors.paragraphText}`}
+                  >
+                    {i === 0 ? "Lorem Ipsum" : "Lorem Ipsum simply text"}
+                  </p>
                 </div>
-                <p
-                  className={`text-xl font-medium leading-[24px] ${colors.paragraphText}`}
-                >
-                  {i === 0 ? "Lorem Ipsum" : "Lorem Ipsum simply text"}
-                </p>
-              </div>
-            ))}
+              ))}
+            </div>
+            <Button
+              type="button"
+              className="w-fit"
+              variant={"default"}
+              size="default"
+            >
+              Discover more
+            </Button>
           </div>
-          <Button
-            type="button"
-            className="w-fit"
-            variant={"default"}
-            size="default"
-          >
-            Discover more
-          </Button>
         </div>
       </div>
     </section>

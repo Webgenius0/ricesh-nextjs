@@ -30,13 +30,13 @@ const discoverCardInfo = [
 export default function DiscoverHowLearning() {
   return (
     <section className="bg-dark-foreground/5" data-aos="fade-up">
-      <div className="container py-[120px]">
+      <div className="container py-6 md:py-[120px] px-5 md:px-8">
         <div>
-          <h2 className="text-3xl font-semibold font-outfit text-foreground">
+          <h2 className="text-xl md:text-3xl font-semibold font-outfit text-foreground">
             Discover How Learning Transforms Lives
           </h2>
         </div>
-        <div className="grid grid-cols-3 gap-6 mt-9">
+        <div className="flex overflow-x-scroll gap-4 xl:gap-6 mt-9 snap-x snap-mandatory flex-nowrap">
           {discoverCardInfo?.map((data, idx) => (
             <DiscoverCard key={idx} data={data} />
           ))}
@@ -48,7 +48,7 @@ export default function DiscoverHowLearning() {
 
 function DiscoverCard({ data }) {
   return (
-    <div className="bg-white rounded-3xl p-6">
+    <div className="bg-white rounded-3xl p-6 basis-full md:basis-[calc(1/3*100%-11px)] xl:basis-[calc(1/3*100%-16px)] shrink-0 snap-center">
       <div className="flex items-center justify-between mb-8">
         <div className="text-[#FFA136] flex items-center gap-1">
           {[...Array(data?.stars)].map((_, idx) => (

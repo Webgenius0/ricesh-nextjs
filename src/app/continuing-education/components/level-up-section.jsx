@@ -84,17 +84,17 @@ const levelUpCourseData = [
 export default function LevelUpSection() {
   return (
     <section data-aos="fade-up">
-      <div className="container py-[100px]">
+      <div className="container py-6 md:py-[100px] px-5 md:px-8">
         <div>
-          <h1 className="text-3xl font-outfit font-semibold text-foreground">
+          <h1 className="text-xl md:text-3xl font-outfit font-semibold text-foreground">
             Level Up - Transform Your Career & Organization
           </h1>
-          <p className="text-base mt-3">
+          <p className="text-sm lg:text-base mt-3">
             Empower your career and team with innovative learning solutioris
             tailored to your goals.
           </p>
         </div>
-        <div className="grid grid-cols-4 mt-9 gap-6">
+        <div className="flex overflow-x-scroll xl:overflow-auto xl:grid xl:grid-cols-4 mt-9 gap-6">
           {levelUpCourseData?.map((data, idx) => (
             <LevelUpCard key={idx} data={data} />
           ))}
@@ -106,7 +106,7 @@ export default function LevelUpSection() {
 
 function LevelUpCard({ data }) {
   return (
-    <div className="border-[1px] border-[#E7E7E9] shadow-[0px_2px_2px_rgba(0,0,0,0.05)] rounded-2xl flex flex-col">
+    <div className="border-[1px] border-[#E7E7E9] shadow-[0px_2px_2px_rgba(0,0,0,0.05)] rounded-2xl flex flex-col min-w-[273px] lg:w-auto">
       <div
         className={cn(
           "border-t-8 border-primary rounded-t-2xl bg-dark-foreground/10 px-5 pb-5 pt-8",

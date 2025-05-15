@@ -95,8 +95,8 @@ export default function Navbar() {
       )}
     >
       <div className="container px-5 md:px-8 flex justify-between items-center relative">
-        <div className="flex gap-3 md:gap-[72px] items-center">
-          <div className="flex md:hidden">
+        <div className="flex gap-3 lg:gap-[72px] items-center">
+          <div className="flex lg:hidden">
             <MobileNav bgColor={bgColor} />
           </div>
           {/* Logo */}
@@ -114,7 +114,7 @@ export default function Navbar() {
             </h2>
           </Link>
           {/* Links For Desktop & Large Screens & Tablets */}
-          <div className="hidden md:flex gap-5 items-center">
+          <div className="hidden lg:flex gap-5 items-center">
             {links.map((item) => (
               <Link
                 href={item.path}
@@ -151,7 +151,7 @@ function MobileNav({ bgColor }) {
       <SheetTrigger>
         <div
           onClick={() => setMobileNavOpen(!mobileNavOpen)}
-          className="space-y-1 group w-6 h-6 flex flex-col items-center justify-center overflow-hidden cursor-pointer md:hidden"
+          className="space-y-1 group w-6 h-6 flex flex-col items-center justify-center overflow-hidden cursor-pointer lg:hidden"
         >
           <div
             className={cn(

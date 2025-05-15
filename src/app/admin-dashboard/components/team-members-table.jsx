@@ -151,13 +151,13 @@ const tableData = [
 export default function TeamMembersTable() {
   return (
     <section data-aos="fade-up">
-      <div className="container mb-6">
+      <div className="container mb-6 px-5 md:px-8">
         <Card className="gap-0 p-6">
-          <div className="flex items-center gap-3">
-            <div className="w-1/3">
+          <div className="flex items-center flex-col md:flex-row gap-3">
+            <div className="w-full md:w-1/3">
               <TableSearchField />
             </div>
-            <div className="flex-1 flex items-center gap-3">
+            <div className="flex-1 flex-col md:flex-row flex items-center gap-3 w-full">
               <TableDropDown
                 selectOption={selectOption}
                 placeholder="Progress Type"
@@ -177,17 +177,19 @@ export default function TeamMembersTable() {
               Team Members
             </h2>
           </div>
-          <div>
-            <div className="grid grid-cols-6 gap-3 mt-6 bg-[#F0F0F0] text-base font-medium font-outfit px-6 py-2 rounded-t-xl">
-              <div>Name</div>
-              <div className="col-span-2">Course Assigned</div>
-              <div>Progress</div>
-              <div>Time Spent</div>
-              <div>Completion Date</div>
+          <div className="overflow-x-scroll">
+            <div className="w-max lg:w-auto">
+              <div className="grid grid-cols-6 gap-3 mt-6 bg-[#F0F0F0] text-base font-medium font-outfit px-3.5 md:px-6 py-2 rounded-t-xl">
+                <div>Name</div>
+                <div className="col-span-2">Course Assigned</div>
+                <div>Progress</div>
+                <div>Time Spent</div>
+                <div>Completion Date</div>
+              </div>
+              {tableData.map((data, idx) => (
+                <TableRowData key={idx} data={data} />
+              ))}
             </div>
-            {tableData.map((data, idx) => (
-              <TableRowData key={idx} data={data} />
-            ))}
           </div>
         </Card>
       </div>
@@ -204,7 +206,7 @@ function TableSearchField() {
       <Input
         placeholder="Search by Name"
         type="search"
-        className="outline-none focus-visible:border-none focus-visible:ring-ring/0 focus-visible:ring-[0px] h-fit shadow-none text-base text-muted-foreground p-0 placeholder:text-foreground border-none rounded-none"
+        className="outline-none focus-visible:border-none focus-visible:ring-ring/0 focus-visible:ring-[0px] h-fit shadow-none !text-sm md:!text-base text-muted-foreground p-0 placeholder:text-foreground border-none rounded-none"
       />
     </div>
   );
@@ -216,7 +218,7 @@ function TableDropDown({ selectOption, placeholder = "Lorem Ipsum" }) {
   };
   return (
     <Select onValueChange={handleValueChange}>
-      <SelectTrigger className="w-full border-[1px] border-muted-foreground/20 shadow-none !text-base !text-muted-foreground !p-3 focus-visible:ring-0 rounded-full">
+      <SelectTrigger className="w-full border-[1px] border-muted-foreground/20 shadow-none !text-sm md:!text-base !text-muted-foreground !p-3 focus-visible:ring-0 rounded-full">
         <SelectValue placeholder={placeholder} />
       </SelectTrigger>
       <SelectContent className="">
@@ -248,7 +250,7 @@ function TableRowData({ data }) {
 
   return (
     <div className="bg-muted">
-      <div className="grid grid-cols-6 gap-3 mt-1.5 px-6 py-[18px] items-center">
+      <div className="grid grid-cols-6 gap-3 mt-1.5 px-3.5 md:px-6 py-[18px] items-center">
         <div className="text-foreground text-base font-medium">
           {data?.name}
         </div>
@@ -257,7 +259,7 @@ function TableRowData({ data }) {
         </div>
         <div className="text-muted-foreground text-base">{data?.progress}</div>
         <div className="text-muted-foreground text-base">{data?.timeSpent}</div>
-        <div className="text-muted-foreground text-base flex items-center justify-between">
+        <div className="text-muted-foreground text-base flex items-center justify-between gap-6">
           <div>{data?.dueDate}</div>
           <div
             className={`bg-white rounded-full w-fit p-2 select-none transition-transform duration-300 ${
@@ -289,7 +291,7 @@ function TableRowData({ data }) {
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="px-6 py-5 space-y-3">
+            <div className="px-3.5 md:px-6 py-5 space-y-3">
               {data?.modules.map((module, idx) => (
                 <div
                   key={idx}

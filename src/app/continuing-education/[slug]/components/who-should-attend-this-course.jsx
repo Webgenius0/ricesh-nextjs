@@ -27,7 +27,7 @@ export default function WhoShouldAttendThisCourse() {
             </div>
           </div>
         </div>
-        <div className="w-3/5 ">
+        <div className="lg:w-3/5 ">
           <Title text="Who should attend this course?" />
           <ul className="pl-5 mt-4 space-y-3 mb-5">
             <ListItem text="Any ASHA member, CCC holder, or other professional that is licensed or credentialed to practice speech-language pathology (SLP) or preparing to earn ASHA CEUS." />
@@ -64,7 +64,7 @@ export default function WhoShouldAttendThisCourse() {
             content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
           />
         </div>
-        <div className="w-3/5 ">
+        <div className="lg:w-3/5 ">
           <Title text="Accommodations" className="mb-5" />
           <div>
             <Title
@@ -86,10 +86,10 @@ export default function WhoShouldAttendThisCourse() {
             </ul>
           </div>
         </div>
-        <div className="w-3/4 rounded-2xl overflow-hidden">
+        <div className="md:w-3/4 rounded-2xl overflow-hidden">
           <img className="w-full" src="/images/card_image.png" alt="" />
         </div>
-        <div className="w-3/5">
+        <div className="lg:w-3/5">
           <Title
             text="Professional Conduct & Nondiscrimination Policy"
             className="mb-5"
@@ -137,7 +137,7 @@ export default function WhoShouldAttendThisCourse() {
             content="Because this is a free course, refunds are not applicable"
           />
         </div>
-        <div className="w-3/5">
+        <div className="lg:w-3/5">
           <Title text="Complaint & Resolution Policy" className="mb-5" />
           <div>
             <Title
@@ -147,10 +147,12 @@ export default function WhoShouldAttendThisCourse() {
             <Paragraph content="We take all concerns seriously and aim to resolve them promptly. If you have a complaint regarding course content, instructor conduct, or technical issues, follow these steps:" />
             <ul className="mt-3 space-y-3">
               <ListItemWithIcon>
-                Submit a Complaint: Fill out the{" "}
-                <Link href={"#"} className="underline">
-                  Complaint Form
-                </Link>{" "}
+                Submit a Complaint: Fill out the
+                <div>
+                  <Link href={"#"} className="underline">
+                    Complaint Form
+                  </Link>
+                </div>
                 with relevant details.
               </ListItemWithIcon>
               <ListItemWithIcon>
@@ -182,7 +184,7 @@ export default function WhoShouldAttendThisCourse() {
 function Title({ text = "This Title", className }) {
   return (
     <h1
-      className={`text-3xl font-semibold font-outfit text-white ${className}`}
+      className={`text-xl md:text-3xl font-semibold font-outfit text-white ${className}`}
     >
       {text}
     </h1>
@@ -191,13 +193,15 @@ function Title({ text = "This Title", className }) {
 
 function Paragraph({ content = "This is a paragraph", className }) {
   return (
-    <p className={`text-base text-dark-foreground ${className}`}>{content}</p>
+    <p className={`text-sm md:text-base text-dark-foreground ${className}`}>
+      {content}
+    </p>
   );
 }
 function ListItem({ text = "This List", className }) {
   return (
     <li
-      className={`text-base font-inter text-dark-foreground list-disc list-outside ${className}`}
+      className={`text-sm md:text-base font-inter text-dark-foreground list-disc list-outside ${className}`}
     >
       {text}
     </li>
@@ -206,7 +210,7 @@ function ListItem({ text = "This List", className }) {
 function ListItemWithIcon({ className, children = "This List" }) {
   return (
     <li
-      className={`text-base font-inter text-dark-foreground flex items-center gap-2 ${className}`}
+      className={`text-sm md:text-base font-inter text-dark-foreground flex items-center flex-wrap gap-2 ${className}`}
     >
       <span className="text-primary">
         <SelectedCheck />

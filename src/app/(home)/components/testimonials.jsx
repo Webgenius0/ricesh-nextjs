@@ -125,7 +125,7 @@ function TestimonialCard({ index, cardInfo }) {
 
   return (
     <CarouselItem
-      className={cn("w-full md:basis-1/2 lg:basis-1/3", isActive && "z-40")}
+      className={cn("w-full basis-1/3", isActive && "z-40")}
     >
       <Card
         className={cn(
