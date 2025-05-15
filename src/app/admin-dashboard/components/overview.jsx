@@ -38,10 +38,10 @@ const CardInfo = [
 export default function Overview() {
   return (
     <section data-aos="fade-up">
-      <div className="container mb-6">
-        <Card className="px-6 py-5 gap-0">
+      <div className="container mb-6 px-5 md:px-8">
+        <Card className="p-4 md:px-6 md:py-5 gap-0">
           <h5 className="font-semibold text-xl font-outfit">Overview</h5>
-          <div className="grid grid-cols-4 gap-4 mt-5">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-4 mt-5">
             {CardInfo?.map((data, idx) => (
               <CourseCard key={idx} data={data} />
             ))}
@@ -57,19 +57,19 @@ function CourseCard({ data }) {
     primary: "bg-primary/10",
     info: "bg-info/10",
     success: "bg-success/10",
-    warning: "bg-warning/10",
+    warning: "bg-[#FF4D4D]/10",
   };
   const textColorClasses = {
     primary: "text-primary",
     info: "text-info",
     success: "text-success",
-    warning: "text-warning",
+    warning: "text-[#FF4D4D]",
   };
   return (
     <div
       className={`${
         bgColorClasses[data?.color]
-      } p-6 rounded-2xl flex items-center gap-3`}
+      } py-5 px-4 md:p-6 rounded-2xl flex items-center gap-3`}
     >
       <div
         className={`${
@@ -79,10 +79,12 @@ function CourseCard({ data }) {
         {data?.icon}
       </div>
       <div>
-        <h4 className="text-2xl font-semibold font-outfit text-foreground">
+        <h4 className="text-xl md:text-2xl font-semibold font-outfit text-foreground">
           {data?.value}
         </h4>
-        <p className="text-base text-muted-foreground">{data?.description}</p>
+        <p className="text-sm md:text-base text-muted-foreground">
+          {data?.description}
+        </p>
       </div>
     </div>
   );

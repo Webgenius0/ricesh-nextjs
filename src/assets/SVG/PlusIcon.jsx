@@ -7,9 +7,23 @@ const PlusIcon = () => {
       width="24"
       height="24"
       viewBox="0 0 24 24"
+      fill="none"
       color="currentColor"
     >
-      <path fill="currentColor" d="M5 13v-1h6V6h1v6h6v1h-6v6h-1v-6z" />
+      <path
+        d="M6 12H18"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M12 18V6"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 };

@@ -72,9 +72,9 @@ export default function AssignCourses() {
   };
   return (
     <section data-aos="fade-up">
-      <div className="container mb-[120px]">
+      <div className="container mb-[120px] px-5 md:px-8">
         <Card className="gap-0 p-6">
-          <div className="grid grid-cols-5 gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-3">
             <TableSearchField />
             <TableDropDown
               selectOption={selectOption}
@@ -95,30 +95,32 @@ export default function AssignCourses() {
               Assign Courses
             </h2>
           </div>
-          <div>
-            <div className="grid grid-cols-7 gap-3 mt-6 bg-[#F0F0F0] text-base font-medium font-outfit px-6 py-2 rounded-t-xl">
-              <div>
-                <CheckBoxField
-                  isChecked={checkData.length === tableData.length}
-                  handleCheckboxChange={handleCheckboxChange}
-                >
-                  Select
-                </CheckBoxField>
+          <div className="overflow-x-scroll">
+            <div className="w-max lg:w-auto">
+              <div className="grid grid-cols-7 gap-3 mt-6 bg-[#F0F0F0] text-base font-medium font-outfit px-6 py-2 rounded-t-xl">
+                <div>
+                  <CheckBoxField
+                    isChecked={checkData.length === tableData.length}
+                    handleCheckboxChange={handleCheckboxChange}
+                  >
+                    Select
+                  </CheckBoxField>
+                </div>
+                <div className="col-span-2">Course Name</div>
+                <div>Duration</div>
+                <div>CEU Credits</div>
+                <div>Registration</div>
+                <div>Completions (0/0)</div>
               </div>
-              <div className="col-span-2">Course Name</div>
-              <div>Duration</div>
-              <div>CEU Credits</div>
-              <div>Registration</div>
-              <div>Completions (0/0)</div>
+              {tableData.map((data, idx) => (
+                <TableRowData
+                  key={idx}
+                  data={data}
+                  setCheckData={setCheckData}
+                  checkData={checkData}
+                />
+              ))}
             </div>
-            {tableData.map((data, idx) => (
-              <TableRowData
-                key={idx}
-                data={data}
-                setCheckData={setCheckData}
-                checkData={checkData}
-              />
-            ))}
           </div>
         </Card>
       </div>
@@ -135,7 +137,7 @@ function TableSearchField() {
       <Input
         placeholder="Search by Course"
         type="search"
-        className="outline-none focus-visible:border-none focus-visible:ring-ring/0 focus-visible:ring-[0px] h-fit shadow-none text-base text-muted-foreground p-0 placeholder:text-foreground placeholder:text-base border-none rounded-none"
+        className="outline-none focus-visible:border-none focus-visible:ring-ring/0 focus-visible:ring-[0px] h-fit shadow-none !text-sm md:!text-base text-muted-foreground p-0 placeholder:text-foreground placeholder:text-base border-none rounded-none"
       />
     </div>
   );
@@ -147,7 +149,7 @@ function TableDropDown({ selectOption, placeholder = "Lorem Ipsum" }) {
   };
   return (
     <Select onValueChange={handleValueChange}>
-      <SelectTrigger className="w-full border-[1px] border-muted-foreground/20 shadow-none !text-base !text-muted-foreground !p-3 focus-visible:ring-0 rounded-full">
+      <SelectTrigger className="w-full border-[1px] border-muted-foreground/20 shadow-none !text-sm md:!text-base  !text-muted-foreground !p-3 focus-visible:ring-0 rounded-full">
         <SelectValue placeholder={placeholder} />
       </SelectTrigger>
       <SelectContent className="">

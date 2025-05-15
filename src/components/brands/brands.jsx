@@ -4,7 +4,6 @@ import Image from "next/image";
 
 const logos = [
   "/images/brand-logo.png",
-  "/images/brand-logo2.jpg",
   "/images/brand3.png",
   "/images/brand4.png",
   "/images/brand5.png",
@@ -25,12 +24,15 @@ export default function Brands() {
       <div className="relative w-full overflow-hidden">
         <div className="flex items-center md:gap-16 animate-marquee whitespace-nowrap will-change-transform">
           {[...logos, ...logos].map((src, index) => (
-            <div key={index} className="flex-shrink-0 w-40 h-10 lg:h-20 relative">
+            <div
+              key={index}
+              className="flex-shrink-0 w-40 h-10 lg:h-20 relative"
+            >
               <Image
                 src={src}
                 alt={`Brand logo ${index + 1}`}
                 fill
-                className="object-contain grayscale opacity-70 hover:opacity-100 transition-all duration-300 ease-in-out"
+                className="object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300 ease-in-out"
               />
             </div>
           ))}
