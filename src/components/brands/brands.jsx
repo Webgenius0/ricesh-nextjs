@@ -13,6 +13,7 @@ const logos = [
   "/images/brand8.png",
   "/images/brand9.png",
   "/images/brand10.png",
+  "/images/brand11.png",
 ];
 
 export default function Brands() {
