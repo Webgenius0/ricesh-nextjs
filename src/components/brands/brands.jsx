@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Marquee from "react-fast-marquee";
 
 const logos = [
   "/images/brand-logo.png",
@@ -20,8 +21,30 @@ export default function Brands() {
       <h2 className="font-inter font-medium text-base md:text-xl lg:text-2xl leading-[24px] md:leading-[30px] tracking-normal text-center mb-8 text-gray-700 max-w-[296px] md:max-w-full mx-auto">
         Since 2016, publications & convention presentations from our founder
       </h2>
+      <div className="">
+        <Marquee
+          speed={40}
+          gradient={false}
+          direction="left"
+          loop={0}
+          delay={0}
+          play={true}
+          className="flex items-center"
+          pauseOnHover={true}
+        >
+          {[...logos, ...logos]?.map((src, index) => (
+            <div key={index} className="relative mr-6 w-fit">
+              <img
+                src={src}
+                alt=""
+                className="h-10 grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300 ease-in-out"
+              />
+            </div>
+          ))}
+        </Marquee>
+      </div>
 
-      <div className="relative w-full overflow-hidden">
+      {/* <div className="relative w-full overflow-hidden">
         <div className="flex items-center md:gap-16 animate-marquee whitespace-nowrap will-change-transform">
           {[...logos, ...logos].map((src, index) => (
             <div
@@ -37,7 +60,7 @@ export default function Brands() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
       {/* <div>
         <div className="flex flex-wrap items-center justify-center gap-[18px] md:hidden">
           {logos?.map((src, idx) => (
