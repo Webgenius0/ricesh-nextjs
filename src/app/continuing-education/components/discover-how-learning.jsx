@@ -36,7 +36,7 @@ export default function DiscoverHowLearning() {
             Discover How Learning Transforms Lives
           </h2>
         </div>
-        <div className="flex overflow-x-scroll gap-4 xl:gap-6 mt-9 snap-x snap-mandatory flex-nowrap">
+        <div className="flex overflow-x-scroll lg:overflow-x-auto gap-4 xl:gap-6 mt-9 snap-x snap-mandatory flex-nowrap">
           {discoverCardInfo?.map((data, idx) => (
             <DiscoverCard key={idx} data={data} />
           ))}
@@ -48,7 +48,7 @@ export default function DiscoverHowLearning() {
 
 function DiscoverCard({ data }) {
   return (
-    <div className="bg-white rounded-3xl p-6 basis-full md:basis-[calc(1/3*100%-11px)] xl:basis-[calc(1/3*100%-16px)] shrink-0 snap-center">
+    <div className="bg-white rounded-3xl p-6 basis-full md:basis-1/2 xl:basis-[calc(1/3*100%-16px)] shrink-0 snap-center">
       <div className="flex items-center justify-between mb-8">
         <div className="text-[#FFA136] flex items-center gap-1">
           {[...Array(data?.stars)].map((_, idx) => (

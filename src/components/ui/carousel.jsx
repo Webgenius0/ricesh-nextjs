@@ -114,7 +114,7 @@ function CarouselContent({ className, ...props }) {
   return (
     <div
       ref={carouselRef}
-      className="overflow-hidden"
+      className="rounded-l-2xl"
       data-slot="carousel-content"
     >
       <div
@@ -151,6 +151,8 @@ function CarouselPrevious({
   className,
   variant = "outline",
   size = "icon",
+  disabled,
+  children,
   ...props
 }) {
   const { orientation, scrollPrev, canScrollPrev } = useCarousel();
@@ -167,12 +169,16 @@ function CarouselPrevious({
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
-      disabled={!canScrollPrev}
+      disabled={disabled ?? !canScrollPrev}
       onClick={scrollPrev}
       {...props}
     >
-      <ArrowLeft />
-      <span className="sr-only">Previous slide</span>
+      {children ?? (
+        <>
+          <ArrowLeft />
+          <span className="sr-only">Previous slide</span>
+        </>
+      )}
     </Button>
   );
 }
@@ -181,6 +187,7 @@ function CarouselNext({
   className,
   variant = "outline",
   size = "icon",
+  children,
   ...props
 }) {
   const { orientation, scrollNext, canScrollNext } = useCarousel();
@@ -201,8 +208,12 @@ function CarouselNext({
       onClick={scrollNext}
       {...props}
     >
-      <ArrowRight />
-      <span className="sr-only">Next slide</span>
+      {children ?? (
+        <>
+          <ArrowRight />
+          <span className="sr-only">Next slide</span>
+        </>
+      )}
     </Button>
   );
 }
