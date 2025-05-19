@@ -9,7 +9,7 @@ export default function page() {
       <AdminControlPanelHeader />
       <AdminControlPanelTopSection />
       <ChartSection />
-      {/* <UserManagement /> */}
+      <UserManagement />
     </div>
   );
 }
