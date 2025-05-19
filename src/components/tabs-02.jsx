@@ -1,10 +1,12 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { cn } from "@/lib/utils";
 
 export default function TabsUnderlined({
   tabs,
   containerClassName,
   tabsTriggerClassName,
   tabContentClassName = "container px-5 md:px-8",
+  contentClassName = "bg-dark",
 }) {
   return (
     <Tabs defaultValue={tabs[0].value} className="w-full gap-0">
@@ -24,7 +26,11 @@ export default function TabsUnderlined({
         </div>
       </div>
       {tabs.map((tab) => (
-        <TabsContent key={tab.value} value={tab.value} className="bg-dark">
+        <TabsContent
+          key={tab.value}
+          value={tab.value}
+          className={cn(contentClassName)}
+        >
           <div className={tabContentClassName}>{tab.component}</div>
         </TabsContent>
       ))}
