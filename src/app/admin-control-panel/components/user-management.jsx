@@ -92,7 +92,7 @@ export default function UserManagement() {
               </div>
             </div>
           </div>
-          <div className="overflow-x-scroll">
+          <div className="overflow-x-scroll md:overflow-x-auto">
             <div className="w-max lg:w-auto">
               <div className="grid grid-cols-6 md:grid-cols-7 gap-3 mt-6 bg-[#F0F0F0] text-base font-medium font-outfit px-3.5 md:px-6 py-2 rounded-t-xl">
                 <div className="md:col-span-2">Course Name</div>
