@@ -57,30 +57,30 @@ export default function DashboardNavbar() {
     >
       <div
         className={cn("bg-dark fixed w-full z-30 transition-top duration-300", {
-          "top-[148px]": visible,
-          "top-[0px]": !visible,
+          "top-[100px] md:top-[148px]": visible,
+          "-top-1 md:top-[0px]": !visible,
         })}
       >
-        <div className="container flex items-center justify-between pt-6">
-          <div className="flex flex-col justify-between gap-4">
+        <div className="container  px-5 md:px-8 mt-8 flex flex-col justify-between md:pt-6">
+          <div className="flex flex-row justify-between gap-4">
             <GlobalText>Dashboard</GlobalText>
-            <div className="flex gap-8 mt-5">
-              {dashboardNavLinks?.map((info, idx) => (
-                <Link
-                  key={idx}
-                  className={cn(
-                    "text-dark-foreground text-base font-medium pb-2.5",
-                    pathname === info?.link && "border-b-4"
-                  )}
-                  href={info?.link}
-                >
-                  {info?.text}
-                </Link>
-              ))}
+            <div>
+              <Button>Post Job</Button>
             </div>
           </div>
-          <div>
-            <Button>Post Job</Button>
+          <div className="flex gap-3.5 md:gap-8 mt-5 overflow-x-scroll md:overflow-auto">
+            {dashboardNavLinks?.map((info, idx) => (
+              <Link
+                key={idx}
+                className={cn(
+                  "text-dark-foreground text-sm md:text-base font-medium pb-2.5",
+                  pathname === info?.link && "border-b-4"
+                )}
+                href={info?.link}
+              >
+                {info?.text}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

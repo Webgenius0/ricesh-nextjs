@@ -1,3 +1,3 @@
 export default function page() {
-    return <div>recruiter-dashboard</div>;
+  return <div>recruiter-dashboard</div>;
 }
