@@ -28,7 +28,7 @@ const tableData = [
 export default function LatestApplications() {
   return (
     <section>
-      <div className="container px-5 md:px-8 my-5">
+      <div className="container px-5 md:px-8 my-5 mb-[120px]">
         <Card className="p-4 md:px-6 md:py-5 gap-0">
           <h5 className="font-semibold text-xl font-outfit text-foreground">
             Latest Applications
