@@ -61,8 +61,8 @@ export default function DashboardNavbar() {
           "-top-1 md:top-[0px]": !visible,
         })}
       >
-        <div className="container  px-5 md:px-8 mt-8 flex flex-col justify-between md:pt-6">
-          <div className="flex flex-row justify-between gap-4">
+        <div className="container px-5 md:px-8 mt-6 md:mt-8 flex flex-col justify-between">
+          <div className="flex flex-row items-center justify-between gap-4">
             <GlobalText>Dashboard</GlobalText>
             <div>
               <Button>Post Job</Button>
