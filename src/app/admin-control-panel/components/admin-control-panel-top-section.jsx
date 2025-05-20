@@ -38,9 +38,9 @@ const CardInfo = [
 export default function AdminControlPanelTopSection() {
   return (
     <section data-aos="fade-up">
-      <div className="container mb-6">
-        <Card className="p-5 gap-0">
-          <div className="grid grid-cols-4 gap-4">
+      <div className="container mb-6 px-5 md:px-8">
+        <Card className="p-4 md:p-5 gap-0">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {CardInfo?.map((data, idx) => (
               <CourseCard key={idx} data={data} />
             ))}
@@ -68,20 +68,22 @@ function CourseCard({ data }) {
     <div
       className={`${
         bgColorClasses[data?.color]
-      } p-6 rounded-2xl flex items-center gap-3`}
+      } py-5 px-4 md:p-6 rounded-2xl flex items-center gap-3`}
     >
       <div
         className={`${
           textColorClasses[data?.color]
-        } bg-white w-fit p-3.5 rounded-full`}
+        } bg-white w-fit p-[11px] md:p-3.5 rounded-full`}
       >
         {data?.icon}
       </div>
       <div>
-        <h4 className="text-2xl font-semibold font-outfit text-foreground">
+        <h4 className="text-xl md:text-2xl font-semibold font-outfit text-foreground">
           {data?.value}
         </h4>
-        <p className="text-base text-muted-foreground">{data?.description}</p>
+        <p className="text-sm md:text-base text-muted-foreground">
+          {data?.description}
+        </p>
       </div>
     </div>
   );

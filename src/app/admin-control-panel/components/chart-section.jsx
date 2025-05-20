@@ -26,13 +26,11 @@ import {
 } from "@/components/ui/chart";
 
 const chartData = [
-  { month: "CA", users: 130, recruiters: 1430 },
+  { month: "CA", users: 1430, recruiters: 1430 },
   { month: "TX", users: 955, recruiters: 780 },
   { month: "FL", users: 439, recruiters: 1340 },
   { month: "NY", users: 334, recruiters: 430 },
   { month: "IL", users: 840, recruiters: 330 },
-  { month: "IL", users: 430, recruiters: 430 },
-  { month: "IL", users: 230, recruiters: 330 },
 ];
 
 const chartConfig = {
@@ -49,12 +47,12 @@ const chartConfig = {
 export default function ChartSection() {
   return (
     <section>
-      <div className="container my-6">
-        <div className="flex items-center gap-6">
-          <div className="flex-1" data-aos="fade-up">
+      <div className="container my-6 px-5 md:px-8">
+        <div className="flex flex-col lg:flex-row items-center gap-6">
+          <div className="flex-1 w-full h-full" data-aos="fade-up">
             <CourseAndSurveyManagementChart />
           </div>
-          <div className="w-1/3" data-aos="fade-up">
+          <div className="w-full lg:w-1/3 h-full" data-aos="fade-up">
             <DonutChart />
           </div>
         </div>
@@ -65,10 +63,10 @@ export default function ChartSection() {
 
 function CourseAndSurveyManagementChart() {
   return (
-    <Card className="w- p-6 gap-0">
+    <Card className="p-6 gap-0 !h-full">
       <CardHeader className="p-0">
         <div>
-          <CardTitle className="text-2xl font-semibold font-outfit">
+          <CardTitle className="text-xl md:text-2xl font-semibold font-outfit">
             Course & Survey Management
           </CardTitle>
         </div>
@@ -78,14 +76,14 @@ function CourseAndSurveyManagementChart() {
               className="h-3 w-3 rounded-full"
               style={{ backgroundColor: "#4C4CFF" }}
             ></div>
-            <span className="text-sm font-medium">Users</span>
+            <span className="text-xs md:text-sm font-medium">Users</span>
           </div>
           <div className="flex items-center gap-2">
             <div
               className="h-3 w-3 rounded-full"
               style={{ backgroundColor: "#4CA64C" }}
             ></div>
-            <span className="text-sm font-medium">Recruiters</span>
+            <span className="text-xs md:text-sm font-medium">Recruiters</span>
           </div>
         </div>
       </CardHeader>
@@ -93,7 +91,7 @@ function CourseAndSurveyManagementChart() {
         <ChartContainer
           config={chartConfig}
           className="w-full [&_.recharts-cartesian-grid_line[stroke='#ccc']]:stroke-[#E4E4E4]"
-          style={{ height: "300px", maxHeight: "300px" }}
+          style={{ maxHeight: "300px" }}
         >
           <BarChart
             accessibilityLayer
@@ -168,15 +166,15 @@ export function DonutChart() {
   }, []);
 
   return (
-    <Card className="flex flex-col">
+    <Card className="flex flex-col !h-full">
       <CardHeader className="items-center pb-0">
-        <CardTitle>Pie Chart - Donut with Text</CardTitle>
+        <CardTitle className="text-xl md:text-2xl">Pie Chart - Donut with Text</CardTitle>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
         <ChartContainer
           config={DonutChartConfig}
           className="mx-auto aspect-square"
-          style={{ height: "300px", maxHeight: "300px" }}
+          style={{ maxHeight: "300px" }}
         >
           <PieChart>
             <ChartTooltip
@@ -203,7 +201,7 @@ export function DonutChart() {
                         <tspan
                           x={viewBox.cx}
                           y={viewBox.cy}
-                          className="fill-foreground text-3xl font-bold"
+                          className="fill-foreground text-2xl md:text-3xl font-bold"
                         >
                           {totalVisitors.toLocaleString()}K
                         </tspan>
@@ -223,7 +221,7 @@ export function DonutChart() {
           </PieChart>
         </ChartContainer>
         <CardFooter className="flex-col gap-2 text-sm">
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 items-center justify-center">
             {DonutChartData?.map((data, idx) => (
               <div key={idx}>
                 <div className="flex items-center gap-2">
