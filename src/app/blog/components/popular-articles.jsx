@@ -36,8 +36,8 @@ const bigTabs = [
 
 export default function PopularArticles() {
   return (
-    <section className="bg-white">
-      <div className="container px-5 md:px-8" data-aos="fade-up">
+    <section className="bg-white" data-aos="fade-up">
+      <div className="container px-5 md:px-8">
         <Header />
       </div>
       <div data-aos="fade-up">
@@ -55,14 +55,13 @@ export default function PopularArticles() {
 
 function Header() {
   return (
-    <div className="mb-9 space-y-3">
+    <div className="mb-16 pt-[52px] space-y-3">
       <h1 className="font-outfit font-semibold text-xl md:text-3xl tracking-[0%] text-foreground">
-        All the Supervision, Al and Burnout continuing education you need in one
-        place
+        Popular Articles
       </h1>
       <p className="text-sm md:text-base leading-[24px] text-muted-foreground font-light">
-        From introductory to advanced levets, Speechceu.com supports your career
-        growth.
+        From introductory to advanced levels, Speechceu.com supports your career
+        growth
       </p>
     </div>
   );
