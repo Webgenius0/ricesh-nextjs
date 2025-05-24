@@ -1,3 +1,4 @@
+import AboutBanner from "./components/about-banner";
 import AboutHeader from "./components/about-header";
 import ComeSeeUs from "./components/come-see-us";
 import InThePress from "./components/in-the-press";
@@ -9,6 +10,7 @@ export default function page() {
   return (
     <div>
       <AboutHeader />
+      <AboutBanner />
       <WhatWeDo />
       <StoriesForAlex />
       <InThePress />
