@@ -1,5 +1,6 @@
 import SelectedCheck from "@/assets/SVG/SelectedCheck";
 import Link from "next/link";
+import ReviewsSection from "./ReviewsSection";
 
 export default function WhoShouldAttendThisCourse() {
   return (
@@ -28,7 +29,7 @@ export default function WhoShouldAttendThisCourse() {
           </div>
         </div>
         <div className="lg:w-3/5 ">
-          <Title text="Who should attend this course?" />
+          <Title className={"!text-lg"} text="Who should attend this course?" />
           <ul className="pl-5 mt-4 space-y-3 mb-5">
             <ListItem text="Any ASHA member, CCC holder, or other professional that is licensed or credentialed to practice speech-language pathology (SLP) or preparing to earn ASHA CEUS." />
             <ListItem text="Any SLP who is seeking to learn more about stress management. Secondary audience: audiology and other allied health" />
@@ -40,6 +41,9 @@ export default function WhoShouldAttendThisCourse() {
           <ul className="pl-5 mt-3">
             <ListItem text="Any professional who is not interested in stress management, meditation or breathwork." />
           </ul>
+        </div>
+        <div>
+          <ReviewsSection />
         </div>
         <div className="">
           <Title text={"Presenter:"} />
