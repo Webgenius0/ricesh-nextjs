@@ -1,4 +1,4 @@
-import GetInTouch from '../../components/shared/get-in-touch';
+import GetInTouch from "@/components/shared/get-in-touch";
 
 export default function Page() {
   return (

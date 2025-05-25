@@ -1,5 +1,5 @@
-import Components from "@/app/(home)/components/components";
 import { GlobalText } from "@/components/shared/common/GlobalText";
+import Components from "../../(home)/components/components";
 
 export default function page() {
   return (

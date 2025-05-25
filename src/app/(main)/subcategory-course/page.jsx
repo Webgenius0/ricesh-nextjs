@@ -1,9 +1,8 @@
 import WhatDrivesUs from "@/components/shared/what-drives-us";
-import Components from "../(home)/components/components";
-import GetInTouch from "../../components/shared/get-in-touch";
 import EducationBanner from "./components/education-banner";
 import SpeechCeu from "@/components/shared/speech-ceu";
 import LearningModules from "./components/learning-modules";
+import GetInTouch from "@/components/shared/get-in-touch";
 
 export default function Page() {
   return (

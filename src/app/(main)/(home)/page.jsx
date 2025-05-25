@@ -1,15 +1,13 @@
 import Banner from "@/components/banner";
-import GetInTouch from "../../components/shared/get-in-touch";
-import OurMission from "./components/our-mission";
-import WhyWeAreTheBest from "./components/why-we-are-the-best";
-import OurSpecialization from "./components/our-specialization";
-import Components from "./components/components";
-import WhyChooseUs from "./components/why-choose-us";
-import WhatDrivesUs from "../../components/shared/what-drives-us";
-import WeWontSettle from "./components/we-wont-settle";
-import WorkingWithUs from "./components/working-with-us";
-import Testimonials from "./components/testimonials";
 import Brands from "@/components/brands/brands";
+import WhyWeAreTheBest from "./components/why-we-are-the-best";
+import OurMission from "./components/our-mission";
+import OurSpecialization from "./components/our-specialization";
+import WhyChooseUs from "./components/why-choose-us";
+import WhatDrivesUs from "@/components/shared/what-drives-us";
+import WeWontSettle from "./components/we-wont-settle";
+import GetInTouch from "@/components/shared/get-in-touch";
+
 
 export default function Home() {
   return (

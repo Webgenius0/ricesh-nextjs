@@ -1,4 +1,4 @@
-import DashboardNavbar from "@/app/recruiter-dashboard/components/dashboard-navbar";
+import DashboardNavbar from "./components/dashboard-navbar";
 
 export default function MyDashboardLayout({ children }) {
   return (
