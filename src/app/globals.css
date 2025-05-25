@@ -152,6 +152,11 @@
   max-width: 1560px;
 }
 
+::selection {
+  background: var(--primary);
+  color: var(--muted);
+}
+
 /* Scroll Bar Class start here */
 .scrollbar-hide {
   overflow-x: scroll;
