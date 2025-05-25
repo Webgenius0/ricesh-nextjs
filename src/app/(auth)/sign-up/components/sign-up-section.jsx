@@ -13,7 +13,7 @@ import { useGetInTouch } from "@/hooks/contact.hook";
 import Link from "next/link";
 import { useState } from "react";
 
-export default function SignInSection() {
+export default function SignUpSection() {
   const { form, mutate, isPending } = useGetInTouch();
   const [remember, setRemember] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
@@ -25,7 +25,7 @@ export default function SignInSection() {
           <h2 className="text-2xl font-bold font-outfit text-foreground mb-2">
             Speechceu.com
           </h2>
-          <h3 className="text-lg font-medium text-foreground mb-6">Sign In</h3>
+          <h3 className="text-lg font-medium text-foreground mb-6">Sign Up</h3>
           <Button
             variant="light"
             size="default"
@@ -185,8 +185,11 @@ export default function SignInSection() {
           </Form>
           <div className="text-xs text-muted-foreground mt-4 text-center">
             Don&apos;t have an account?{" "}
-            <Link href="/sign-up" className="text-primary font-medium hover:underline">
-              Sign up
+            <Link
+              href="/sign-in"
+              className="text-primary font-medium hover:underline"
+            >
+              Sign in
             </Link>
           </div>
         </div>
