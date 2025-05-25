@@ -1,6 +1,6 @@
 export default function CoursesShopHeader() {
   return (
-    <section>
+    <section className="bg-white">
       <div className="container px-5 md:px-8 py-8 md:py-[60px]">
         <div>
           <h2 className="text-xl md:text-3xl font-outfit font-semibold text-foreground mb-3">

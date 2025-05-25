@@ -84,7 +84,7 @@ export default function Navbar() {
   return (
     <nav
       className={cn(
-        "transition-top duration-300 sticky mt-10 md:mt-[60px] top-0 z-20 bg-transparent h-[60px] md:h-[88px] flex items-center",
+        "transition-top duration-300 sticky mt-10 md:mt-[60px] top-0 z-20 bg-transparent h-[60px] md:h-[88px] flex items-center border-b-[1px] border-[#e7e7e9d7]",
         {
           "top-10 md:top-[60px]": visible,
           "top-0": !visible && !pathname.includes("/dashboard"),
