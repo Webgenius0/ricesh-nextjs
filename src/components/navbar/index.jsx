@@ -84,12 +84,12 @@ export default function Navbar() {
   return (
     <nav
       className={cn(
-        "transition-top duration-300 sticky mt-10 md:mt-[60px] top-0 z-20 bg-transparent h-[60px] md:h-[88px] flex items-center border-b-[1px] border-[#e7e7e9d7]",
+        "transition-top duration-300 sticky mt-10 md:mt-[60px] top-0 z-20 bg-transparent h-[60px] md:h-[88px] flex items-center border-b-[1px] border-transparent",
         {
           "top-10 md:top-[60px]": visible,
           "top-0": !visible && !pathname.includes("/dashboard"),
           "-top-[148px]": !visible && pathname.includes("/dashboard"),
-          "bg-background": bgColor === "white",
+          "bg-background border-[#e7e7e9d7]": bgColor === "white",
           "backdrop-blur-sm": bgColor === "semi-transparent",
         }
       )}
