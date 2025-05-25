@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 // Banner content as JSON for easy API integration
 const bannerData = {
@@ -10,95 +11,23 @@ const bannerData = {
     {
       title: "Advanced, Comprehensive Training",
       text: "Focused on supervision, AI integration, and burnout prevention, tailored to address the unique challenges clinicians face.",
-      icon: (
-        <svg
-          width="20"
-          height="20"
-          fill="none"
-          className="text-primary"
-          viewBox="0 0 20 20"
-        >
-          <circle cx="10" cy="10" r="10" fill="#00c2c7" />
-          <path
-            d="M7.5 10.5l2 2 3-4"
-            stroke="#fff"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      ),
     },
     {
       title: "Inclusive & Trauma-Informed",
       text: "Designed with neurodivergence and trauma-informed care principles to create accessible and supportive learning environments for all clinicians.",
-      icon: (
-        <svg
-          width="20"
-          height="20"
-          fill="none"
-          className="text-primary"
-          viewBox="0 0 20 20"
-        >
-          <circle cx="10" cy="10" r="10" fill="#00c2c7" />
-          <path
-            d="M7.5 10.5l2 2 3-4"
-            stroke="#fff"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      ),
     },
     {
       title: "Evidence-Based",
       text: "Follows the ASHA Evidence-Based Practice Model, integrating the current best evidence, clinical expertise, and patient/client preferences and values to provide quality, practical strategies and takeaways in every course.",
-      icon: (
-        <svg
-          width="20"
-          height="20"
-          fill="none"
-          className="text-primary"
-          viewBox="0 0 20 20"
-        >
-          <circle cx="10" cy="10" r="10" fill="#00c2c7" />
-          <path
-            d="M7.5 10.5l2 2 3-4"
-            stroke="#fff"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      ),
     },
     {
       title: "Easy Licensure Tracking",
       text: "Streamlines tracking of state and national licensure and certification requirements, saving clinicians time and effort.",
-      icon: (
-        <svg
-          width="20"
-          height="20"
-          fill="none"
-          className="text-primary"
-          viewBox="0 0 20 20"
-        >
-          <circle cx="10" cy="10" r="10" fill="#00c2c7" />
-          <path
-            d="M7.5 10.5l2 2 3-4"
-            stroke="#fff"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      ),
     },
   ],
   button: {
     label: "Meet our founder",
-    href: "#founder",
+    href: "/about/bio",
   },
 };
 
@@ -142,7 +71,7 @@ function BannerDetails() {
       <ul className="space-y-4 mb-6">
         {bannerData.points.map((point, idx) => (
           <li key={idx} className="flex items-start gap-3">
-            <span className="mt-1">{point.icon}</span>
+            <div className="min-h-3 min-w-3 bg-primary rounded-full mt-1.5"></div>
             <span>
               <span className="font-semibold text-foreground">
                 {point.title}:
@@ -158,7 +87,7 @@ function BannerDetails() {
         className="bg-primary text-primary-foreground px-6 py-3 rounded-full text-base font-semibold shadow-none hover:bg-primary/90 transition"
         asChild
       >
-        <a href={bannerData.button.href}>{bannerData.button.label}</a>
+        <Link href={bannerData.button.href}>{bannerData.button.label}</Link>
       </Button>
     </div>
   );
