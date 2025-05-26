@@ -10,11 +10,12 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { useGetInTouch } from "@/hooks/contact.hook";
+import { useSignUp } from "@/hooks/sign-up.hook";
 import Link from "next/link";
 import { useState } from "react";
 
 export default function SignUpSection() {
-  const { form, mutate, isPending } = useGetInTouch();
+  const { form, mutate, isPending } = useSignUp();
   const [remember, setRemember] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
@@ -179,7 +180,7 @@ export default function SignUpSection() {
                 disabled={isPending}
                 className={`md:py-5 px-6 rounded-[8px] cursor-pointer flex text-base font-medium mt-1 w-full`}
               >
-                {isPending ? "Submitting" : "Log in"}
+                {isPending ? "Submitting" : "Sign Up"}
               </Button>
             </form>
           </Form>

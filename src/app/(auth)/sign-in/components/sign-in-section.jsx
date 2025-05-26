@@ -18,8 +18,6 @@ export default function SignInSection() {
   const [remember, setRemember] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
-  console.log("isPending", form.formState.isPending);
-
   return (
     <section className="bg-[url(/images/banner.jpg)] h-screen bg-no-repeat bg-cover flex items-center justify-center">
       <div className="container px-5 md:px-8 flex items-center justify-center h-full">
