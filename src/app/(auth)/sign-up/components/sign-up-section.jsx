@@ -9,7 +9,6 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { useGetInTouch } from "@/hooks/contact.hook";
 import { useSignUp } from "@/hooks/sign-up.hook";
 import Link from "next/link";
 import { useState } from "react";
