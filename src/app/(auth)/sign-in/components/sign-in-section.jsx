@@ -9,12 +9,12 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { useGetInTouch } from "@/hooks/contact.hook";
+import { useSignIn } from "@/hooks/sign-in.hook";
 import Link from "next/link";
 import { useState } from "react";
 
 export default function SignInSection() {
-  const { form, mutate, isPending } = useGetInTouch();
+  const { form, mutate, isPending } = useSignIn();
   const [remember, setRemember] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
