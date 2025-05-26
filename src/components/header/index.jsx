@@ -11,7 +11,7 @@ const links = [
     label: "About",
   },
   {
-    path: "/faq",
+    path: "/frequently-asked-questions",
     label: "FAQ",
   },
   {
